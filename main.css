@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Road Rage', cursive;
+    font-family: 'Roboto Mono', monospace;
+}
+body{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: black;
+    overflow: hidden;
+}
+
+.section_txt{
+    display: inline-flex;
+}
+
+.section_txt .static_txt{
+    color: #ffff;
+    font-size: 60px;
+    font-weight: 300;
+
+}
+
+.section_txt .dynamic-txt{
+    margin-left: 1rem;
+    height: 80px;
+    line-height: 80px;
+    overflow: hidden;
+}
+
+.dynamic-txt li{
+    list-style: none;
+    font-size: 60px;
+    font-weight: 500;
+    color: yellow;
+    position: relative;
+    top: 0;
+    animation: slide 10s steps(2) infinite;
+    
+}
+
+
+@keyframes slide {
+    100%{
+        top: -160px;
+    }
+}
+
+
+.dynamic-txt li span{
+    position: relative;
+}
+
+
+.dynamic-txt li span::after{
+    content:"";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: black;
+    border-left: 2px solid yellow; 
+    animation: typing 2s steps(10) infinite;
+}
+
+@keyframes typing {
+    100%{
+        left: 100%;
+        margin: 0 -70px 0 70px;
+    }
+}
+
+.section_nav{
+    margin-top: 5rem;
+    
+}
+
+button{
+    background-color: black;
+    padding: 0.5rem;
+    color: yellow;
+    border-radius: 5px;
+    border: 2px solid yellow;
+    cursor: pointer;
+}
+
+.button--animate {
+    animation: wink 0.2s steps(4);
+}
+
+@keyframes wink {
+    100%{
+        background: black;
+    }
+    0%{
+        background: yellow;
+        color: black;
+    }
+}
