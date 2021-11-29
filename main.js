@@ -12,6 +12,5 @@ spanishBtn.onclick = (e) => {
     e.preventDefault();
     $("#static_txt--en").toggleClass("hide");
     $("#static_txt--es").toggleClass("active");
-    console.log("hola");
 }
     
