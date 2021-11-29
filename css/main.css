@@ -20,7 +20,8 @@ body {
 .section_txt .static_txt {
   color: #393f03;
   font-size: 60px;
-  font-weight: 300; }
+  font-weight: 300;
+  cursor: default; }
 
 .section_txt .dynamic-txt {
   margin-left: 1rem;
@@ -35,6 +36,7 @@ body {
   color: #393f03;
   position: relative;
   top: 0;
+  cursor: default;
   animation: slide 10s steps(2) infinite; }
 
 .section_txt .dynamic-txt li span {
