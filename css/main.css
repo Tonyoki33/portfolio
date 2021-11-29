@@ -44,12 +44,18 @@ p {
   display: inline-flex;
   align-items: center; }
 
-.section_txt .static_txt {
+.section_txt .static_txt--en, .static_txt--es {
   margin-top: 1.6rem;
   color: #393f03;
   font-size: 4.5rem;
   font-weight: 300;
   cursor: default; }
+
+.hide {
+  display: none; }
+
+.active {
+  display: inline-flex; }
 
 .section_txt .dynamic-txt {
   margin-left: 1rem;
