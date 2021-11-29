@@ -2,9 +2,13 @@ h2 {
   color: #393f03;
   font-size: 3.5rem; }
 
+h3 {
+  color: #dddb41;
+  font-size: 1.4rem; }
+
 p {
   color: #393f03;
-  font-size: 1.5rem; }
+  font-size: 1.2rem; }
 
 * {
   margin: 0;
@@ -45,7 +49,7 @@ p {
   align-items: center; }
 
 .section_txt .static_txt--en, .static_txt--es {
-  margin-top: 1.6rem;
+  margin-top: 3.5rem;
   color: #393f03;
   font-size: 4.5rem;
   font-weight: 300;
@@ -78,7 +82,7 @@ p {
 
 @keyframes slide {
   100% {
-    top: -182px; } }
+    top: -227px; } }
 
 .dynamic-txt li span::after {
   content: "";
@@ -102,7 +106,7 @@ p {
 button {
   margin-right: 1rem;
   background-color: #dddb41;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   padding: 1rem;
   color: #393f03;
   border-radius: 5px;
@@ -131,9 +135,46 @@ button {
   padding: 0 35rem; }
 
 .section_skills {
+  display: grid;
+  grid-template-rows: 20% 80%;
+  grid-template-columns: 20% 30% 30% 20%;
   position: relative;
-  top: 28%;
+  top: 23%;
   margin-bottom: 4rem;
   width: 100%;
-  height: 40%;
+  height: 50%;
   background: #393f03; }
+
+.section_skills--title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-row: 1/2;
+  grid-column: 1/5; }
+  .section_skills--title h2 {
+    font-size: 3.5rem;
+    color: #dddb41;
+    padding-top: 2rem; }
+
+.langs_list, .tools_list {
+  display: flex;
+  grid-row: 2/3;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center; }
+  .langs_list h3, .tools_list h3 {
+    padding: 2rem; }
+
+.langs_list {
+  grid-column: 2/3; }
+
+.tools_list {
+  grid-column: 3/4; }
+
+ul {
+  list-style: none; }
+
+ul li {
+  font-size: 1.2rem;
+  color: #dddb41;
+  padding: 1rem 0; }
