@@ -1,25 +1,53 @@
+h2 {
+  color: #393f03;
+  font-size: 3.5rem; }
+
+p {
+  color: #393f03;
+  font-size: 1.5rem; }
+
 * {
   margin: 0;
   padding: 0;
+  font-size: 67.5%;
   box-sizing: border-box;
   font-family: 'Road Rage', cursive;
   font-family: 'Roboto Mono', monospace; }
 
-body {
+.container {
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll; }
+
+.Page {
   display: flex;
   flex-flow: column;
-  align-items: center;
+  scroll-snap-align: start;
+  height: 100vh; }
+
+.one, .two {
+  display: flex;
+  flex-flow: column;
+  position: relative;
+  width: 100%;
+  height: 100vh; }
+
+.one {
   justify-content: center;
-  min-height: 100vh;
-  background: #dddb41;
-  overflow: hidden; }
+  align-items: center;
+  background-color: #dddb41; }
+
+.two {
+  background-color: #dddb41; }
 
 .section_txt {
-  display: inline-flex; }
+  display: inline-flex;
+  align-items: center; }
 
 .section_txt .static_txt {
+  margin-top: 1.6rem;
   color: #393f03;
-  font-size: 60px;
+  font-size: 4.5rem;
   font-weight: 300;
   cursor: default; }
 
@@ -31,7 +59,7 @@ body {
 
 .section_txt .dynamic-txt li {
   list-style: none;
-  font-size: 60px;
+  font-size: 7rem;
   font-weight: 500;
   color: #393f03;
   position: relative;
@@ -44,11 +72,12 @@ body {
 
 @keyframes slide {
   100% {
-    top: -160px; } }
+    top: -182px; } }
 
 .dynamic-txt li span::after {
   content: "";
   position: absolute;
+  top: 0;
   left: 0;
   height: 100%;
   width: 100%;
@@ -59,14 +88,16 @@ body {
 @keyframes typing {
   100% {
     left: 100%;
-    margin: 0 -70px 0 70px; } }
+    margin: 0 -60px 0 60px; } }
 
 .section_nav {
   margin-top: 5rem; }
 
 button {
+  margin-right: 1rem;
   background-color: #dddb41;
-  padding: 0.5rem;
+  font-size: 1.5rem;
+  padding: 1rem;
   color: #393f03;
   border-radius: 5px;
   border: 2px solid #393f03;
@@ -81,3 +112,22 @@ button {
   0% {
     background: #393f03;
     color: #dddb41; } }
+
+.section_lang-nav {
+  position: relative;
+  top: 0;
+  margin-bottom: 4rem;
+  width: 100%;
+  height: 10%;
+  background: #393f03; }
+
+.section_bio-text {
+  padding: 0 35rem; }
+
+.section_skills {
+  position: relative;
+  top: 28%;
+  margin-bottom: 4rem;
+  width: 100%;
+  height: 40%;
+  background: #393f03; }
