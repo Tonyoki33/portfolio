@@ -1,4 +1,4 @@
-h2 {
+.section_skills--title, .section_bio-text h2 {
   color: #393f03;
   font-size: 3.5rem; }
 
@@ -6,7 +6,7 @@ h3 {
   color: #dddb41;
   font-size: 1.4rem; }
 
-p {
+.section_bio-text p {
   color: #393f03;
   font-size: 1.2rem; }
 
@@ -23,18 +23,19 @@ p {
   scroll-snap-type: y mandatory;
   overflow-y: scroll; }
 
-.Page {
+.page {
   display: flex;
   flex-flow: column;
   scroll-snap-align: start;
   height: 100vh; }
 
-.one, .two {
+.one, .two, .three {
   display: flex;
   flex-flow: column;
   position: relative;
   width: 100%;
-  height: 100vh; }
+  height: 100vh;
+  overflow: hidden; }
 
 .one {
   justify-content: center;
@@ -42,6 +43,12 @@ p {
   background-color: #dddb41; }
 
 .two {
+  background-color: #dddb41; }
+
+.three {
+  height: 100%;
+  width: 100%;
+  position: relative;
   background-color: #dddb41; }
 
 .section_txt {
@@ -93,7 +100,7 @@ p {
   width: 100%;
   background: #dddb41;
   border-left: 2px solid #393f03;
-  animation: typing 2s steps(10) infinite; }
+  animation: typing 4s steps(12) infinite; }
 
 @keyframes typing {
   100% {
@@ -103,46 +110,36 @@ p {
 .section_nav {
   margin-top: 5rem; }
 
-button {
-  margin-right: 1rem;
+.button {
   background-color: #dddb41;
   font-size: 1.2rem;
-  padding: 1rem;
   color: #393f03;
+  text-decoration: none;
+  max-width: 5ch;
+  margin-right: 1rem;
+  padding: 1rem;
   border-radius: 5px;
   border: 2px solid #393f03;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: padding 200ms ease; }
 
-.button--animate {
-  animation: wink 0.2s steps(4); }
-
-@keyframes wink {
-  100% {
-    background: #dddb41; }
-  0% {
-    background: #393f03;
-    color: #dddb41; } }
+.button:hover {
+  padding: 1.2rem;
+  border-radius: 7px;
+  background: #393f03;
+  color: #dddb41; }
 
 .section_lang-nav {
-  position: relative;
-  top: 0;
-  margin-bottom: 4rem;
-  width: 100%;
-  height: 10%;
+  grid-row: 1/2;
   background: #393f03; }
 
 .section_bio-text {
+  grid-row: 2/3;
   padding: 0 35rem; }
 
 .section_skills {
-  display: grid;
-  grid-template-rows: 20% 80%;
-  grid-template-columns: 20% 30% 30% 20%;
+  grid-row: 3/4;
   position: relative;
-  top: 23%;
-  margin-bottom: 4rem;
-  width: 100%;
-  height: 50%;
   background: #393f03; }
 
 .section_skills--title {
@@ -178,3 +175,128 @@ ul li {
   font-size: 1.2rem;
   color: #dddb41;
   padding: 1rem 0; }
+
+/**Section My Work**/
+.section_works {
+  justify-self: center;
+  bottom: 0;
+  grid-row: 1/2; }
+
+.card {
+  grid-row: 2/3;
+  position: relative;
+  padding: 10.5rem 0 0;
+  border-radius: 0.5rem;
+  color: #dddb41;
+  font-size: 3rem;
+  max-width: 35ch;
+  overflow: hidden;
+  transition: transform 500ms ease; }
+
+.card:hover {
+  transform: scale(1.02); }
+
+.card-content {
+  --padding:1.5rem;
+  padding: var(--padding);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  transform: translateY(80%);
+  transition: transform 500ms ease; }
+
+.card:hover .card-content {
+  transform: translateY(-5%); }
+
+.card-title {
+  font-size: 2rem;
+  margin: 1rem 0;
+  position: relative;
+  width: max-content; }
+
+.card-title::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  left: calc(var(--padding) * -1);
+  bottom: 0;
+  width: calc(100% + var(--padding));
+  background: #dddb41;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 700ms ease; }
+
+.card:hover .card-title::after {
+  transform: scaleX(1); }
+
+.card-body {
+  margin: 1rem 0; }
+
+.card-button {
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  background: mediumspringgreen;
+  color: black;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  padding: .5em 1.25em;
+  border-radius: 0.25em; }
+
+.card-button:hover, .card-button:focus {
+  background-color: darkturquoise; }
+
+.card_one {
+  grid-column: 1/2;
+  background: red; }
+
+.card_two {
+  grid-column: 2/3;
+  background: green; }
+
+.card_three {
+  grid-column: 3/4;
+  background: blue; }
+
+.page_three--footer {
+  grid-row: 3/4;
+  background: #393f03; }
+
+::-webkit-scrollbar {
+  background: #dddb41; }
+
+::-webkit-scrollbar-track {
+  background: #393f03; }
+
+::-webkit-scrollbar-thumb {
+  background: #dddb41; }
+
+@media (max-width: 1380px) {
+  * {
+    font-size: 59.7%; }
+  .section_txt .static_txt--en, .static_txt--es {
+    margin-top: 4rem; }
+  @keyframes slide {
+    100% {
+      top: -220px; } } }
+
+@media (max-width: 986px) {
+  * {
+    font-size: 54%; } }
+
+#page_two--grid {
+  display: grid;
+  grid-template-rows: 10% 40% 50%; }
+
+#section_skills--grid {
+  display: grid;
+  grid-template-rows: 20% 80%;
+  grid-template-columns: 20% 30% 30% 20%; }
+
+#page_three--grid {
+  display: grid;
+  grid-template-rows: 50% 5% 45%; }
+
+#section_works--grid {
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  grid-template-rows: 15% 70% 15%;
+  position: relative; }
