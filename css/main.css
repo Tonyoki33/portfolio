@@ -246,7 +246,7 @@ ul li {
 
 .card_one {
   grid-column: 1/2;
-  background: red; }
+  background-image: url("https://ichef.bbci.co.uk/news/640/cpsprodpb/76B0/production/_105848303_gettyimages-996540050.jpg"); }
 
 .card_two {
   grid-column: 2/3;
@@ -269,19 +269,6 @@ ul li {
 ::-webkit-scrollbar-thumb {
   background: #dddb41; }
 
-@media (max-width: 1380px) {
-  * {
-    font-size: 59.7%; }
-  .section_txt .static_txt--en, .static_txt--es {
-    margin-top: 4rem; }
-  @keyframes slide {
-    100% {
-      top: -220px; } } }
-
-@media (max-width: 986px) {
-  * {
-    font-size: 54%; } }
-
 #page_two--grid {
   display: grid;
   grid-template-rows: 10% 40% 50%; }
@@ -300,3 +287,51 @@ ul li {
   grid-template-columns: 33.33% 33.33% 33.33%;
   grid-template-rows: 15% 70% 15%;
   position: relative; }
+
+@media (max-width: 1380px) {
+  * {
+    font-size: 59.7%; }
+  .section_txt .static_txt--en, .static_txt--es {
+    margin-top: 4rem; }
+  @keyframes slide {
+    100% {
+      top: -220px; } } }
+
+@media (max-width: 986px) {
+  * {
+    font-size: 54%; } }
+
+@media (max-width: 480px) {
+  * {
+    font-size: 45%; }
+  .section_txt {
+    display: flex;
+    flex-flow: column; }
+  .static_txt--en, .static_txt--es {
+    font-size: 5rem;
+    width: 45rem;
+    height: 5rem; }
+  .section_txt .dynamic-txt {
+    width: 45rem;
+    height: 5rem; }
+  .section_txt .dynamic-txt li {
+    padding-left: 6.5rem;
+    animation: slide 7s steps(2) infinite;
+    top: -40px; }
+  @keyframes slide {
+    100% {
+      top: -246px; } }
+  .section_bio-text {
+    padding: 0 10rem; }
+  #page_two--grid {
+    display: grid;
+    grid-template-rows: 5% 55% 40%; }
+  .card {
+    font-size: 6rem; }
+  .card-content {
+    transform: translateY(120%);
+    transition: transform 500ms ease; }
+  .card:hover .card-content {
+    transform: translateY(30%); }
+  .section_bio-text p {
+    font-size: 1.5rem; } }
