@@ -1,0 +1,342 @@
+
+
+@media (max-width: 1550px) {
+    *{
+        font-size: 59.7%;
+    }
+
+    .section_txt .static_txt--en,.static_txt--es {
+        margin-top: 4rem;
+    }
+
+    .card-content{
+          --padding:1.5rem;
+
+          transform: translateY(90%);
+    }
+
+    .card:hover .card-content{
+        transform: translateY(10%);
+      }
+
+    @keyframes slide {
+        100% {
+          top: -220px; } }
+
+          
+
+
+}
+
+@media (max-width: 1050px){
+    *{
+        font-size: 63.2%;
+    }
+
+    .section_txt{
+        display: flex;
+        flex-flow: column;
+   
+    }
+
+    .static_txt--en,.static_txt--es{
+        font-size: 5rem;
+        width: 45rem;
+        height: 5rem;
+    }
+    
+    .section_txt .dynamic-txt{
+        width: 60rem;
+        height: 5rem;
+    }
+
+    .section_txt .dynamic-txt li {
+        padding-left: 6.5rem;
+        animation: slide 7s steps(2) infinite;
+        top:-30px;}
+
+        @keyframes slide {
+            100% {
+              top: -250px; } }
+    
+        .section_bio-text{
+            padding: 0 10rem;
+          }
+    
+    
+
+    //// Page three
+    
+        // transitions
+    
+        .card{
+            font-size: 4rem;
+        }
+
+        .card_one{
+            background-position: 20%;
+            background-size: 250%;
+          }
+        
+        
+        .card-content{
+            transform: translateY(170%);
+            transition: transform 500ms ease;
+          }
+          
+          .card:hover .card-content{
+            transform: translateY(85%);
+          }
+    
+}
+
+
+@media (max-width: 986px){
+    *{
+        font-size: 54%;
+    }
+
+    //// Page three
+    
+        // transitions
+    
+        .card{
+            font-size: 4rem;
+        }
+
+        .card_one{
+            background-position: 10%;
+            background-size: 115%;
+          }
+        
+        
+        .card-content{
+            transform: translateY(100%);
+            transition: transform 500ms ease;
+          }
+          
+          .card:hover .card-content{
+            transform: translateY(-10%);
+          }
+    
+}
+
+@media (max-width: 800px){
+    *{
+        font-size: 58%;
+    }
+
+    .section_txt{
+        display: flex;
+        flex-flow: column;
+   
+    }
+
+    .static_txt--en,.static_txt--es{
+        font-size: 5rem;
+        width: 45rem;
+        height: 5rem;
+    }
+    
+    .section_txt .dynamic-txt{
+        width: 60rem;
+        height: 5rem;
+    }
+
+    .section_txt .dynamic-txt li {
+        padding-left: 6.5rem;
+        animation: slide 7s steps(2) infinite;
+        top:-30px;}
+
+        @keyframes slide {
+            100% {
+              top: -250px; } }
+    
+        .section_bio-text{
+            padding: 0 10rem;
+          }
+    
+    
+
+    //// Page three
+    
+        // transitions
+    
+        .card{
+            font-size: 4rem;
+        }
+
+        .card_one{
+            background-position: 20%;
+            background-size: 280%;
+          }
+        
+        
+        .card-content{
+            transform: translateY(150%);
+            transition: transform 500ms ease;
+          }
+          
+          .card:hover .card-content{
+            transform: translateY(55%);
+          }
+    
+}
+
+@media(max-width: 480px){
+
+    *{
+        font-size: 45%;
+    }
+
+    .section_txt{
+        display: flex;
+        flex-flow: column;
+    }
+    
+    .static_txt--en,.static_txt--es{
+        font-size: 5rem;
+        width: 45rem;
+        height: 5rem;
+    }
+    
+    .section_txt .dynamic-txt{
+        width: 45rem;
+        height: 5rem;
+    }
+
+    .section_txt .dynamic-txt li {
+        padding-left: 6.5rem;
+        animation: slide 7s steps(2) infinite;
+        top:-40px;}
+
+        @keyframes slide {
+            100% {
+              top: -246px; } }
+    
+        .section_bio-text{
+            padding: 0 10rem;
+          }
+    
+    
+        //Grids
+        //// Page one
+    
+        //// Page two
+    
+        #page_two--grid{
+            display: grid;
+            grid-template-rows: 5% 55% 40%;
+        }
+    
+        //// Page three
+    
+        // transitions
+    
+        .card{
+            font-size: 6rem;
+        }
+
+        .card_one{
+            background-position: 27%;
+            background-size: 332%;
+          }
+        
+        
+        .card-content{
+            transform: translateY(210%);
+            transition: transform 500ms ease;
+          }
+          
+          .card:hover .card-content{
+            transform: translateY(35%);
+          }
+    
+    
+        //typos
+    
+        .section_bio-text p {
+            font-size: 1.5rem;
+        }
+    
+    }
+
+@media(max-width: 400px){
+
+    *{
+        font-size: 45%;
+    }
+
+    .section_txt{
+        display: flex;
+        flex-flow: column;
+    }
+    
+    .static_txt--en,.static_txt--es{
+        font-size: 5rem;
+        width: 45rem;
+        height: 5rem;
+    }
+    
+    .section_txt .dynamic-txt{
+        width: 45rem;
+        height: 5rem;
+    }
+
+    .section_txt .dynamic-txt li {
+        padding-left: 6.5rem;
+        animation: slide 7s steps(2) infinite;
+        top:-40px;}
+
+        @keyframes slide {
+            100% {
+              top: -246px; } }
+    
+        .section_bio-text{
+            padding: 0 10rem;
+          }
+    
+    
+        //Grids
+        //// Page one
+    
+        //// Page two
+    
+        #page_two--grid{
+            display: grid;
+            grid-template-rows: 5% 55% 40%;
+        }
+    
+        //// Page three
+    
+        // transitions
+    
+        .card{
+            font-size: 6rem;
+        }
+
+        .card_one{
+            background-position: 30%;
+            background-size: 410%;
+          }
+        
+        
+        .card-content{
+            transform: translateY(210%);
+            transition: transform 500ms ease;
+          }
+          
+          .card:hover .card-content{
+            transform: translateY(40%);
+          }
+    
+    
+        //typos
+    
+        .section_bio-text p {
+            font-size: 1.5rem;
+        }
+    
+    }
+
+

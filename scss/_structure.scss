@@ -1,0 +1,418 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 67.5%;
+    box-sizing: border-box;
+    font-family: 'Road Rage', cursive;
+    font-family: 'Roboto Mono', monospace; }
+  
+
+  html{
+    scroll-behavior: smooth;
+  }
+  
+  .container {
+      height: 100vh;
+      scroll-snap-type: y mandatory;
+      overflow-y: scroll;
+  }
+
+
+  //pages properties
+
+
+  .page {
+    display: flex;
+    flex-flow: column;
+    scroll-snap-align: start;
+    height: 100vh;
+}
+
+.one,.two,.three{
+  display: flex;
+  flex-flow: column;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.one{
+  justify-content: center;
+  align-items: center;
+  background-color: $yellowclr;
+}
+
+.two{
+  background-color: $yellowclr;
+}
+
+.three{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-color: $yellowclr;
+}
+
+// home page strings and containers
+
+  .section_txt {
+    display: inline-flex; 
+    align-items: center;}
+    
+    .section_txt .static_txt--en,.static_txt--es {
+      margin-top: 3.5rem;
+      color: $blackclr;
+      font-size: 4.5rem;
+      font-weight: 300;
+      cursor: default;
+
+     }
+
+     .hide{
+       display: none;
+     }
+     .active{
+       display: inline-flex;
+     }
+     
+  
+  .section_txt .dynamic-txt {
+    margin-left: 1rem;
+    height: 80px;
+    line-height: 80px;
+    overflow: hidden; }
+    .section_txt .dynamic-txt li {
+      list-style: none;
+      font-size: $display_sizes;
+      font-weight: 500;
+      color: $blackclr;
+      position: relative;
+      top: 0;
+      cursor: default;
+      animation: slide 10s steps(2) infinite; }
+      .section_txt .dynamic-txt li span {
+        position: relative; }
+  
+  @keyframes slide {
+    100% {
+      top: -227px; } }
+  
+  .dynamic-txt li span::after {
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: $yellowclr;
+    border-left: 2px solid $blackclr;
+    animation: typing 4s steps(12) infinite; }
+  
+  @keyframes typing {
+    100% {
+      left: 100%;
+      margin: 0 -60px 0 60px; } }
+  
+  .section_nav {
+    margin-top: 5rem; }
+  
+  .button {
+    background-color: $yellowclr;
+    font-size: $p_size;
+    color: $blackclr;
+    text-decoration: none;
+    max-width: 5ch;
+    margin-right: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 2px solid $blackclr;
+    cursor: pointer;
+    transition: padding 200ms ease;}
+
+    
+  .button:hover{
+    padding: 1.2rem;
+    border-radius: 7px;
+    background: $blackclr;
+    color: $yellowclr;
+  }
+
+  // making a new button stylish to change the lang_btn
+
+    .lang_btn{
+
+      display: inline;
+      overflow: hidden;
+    }
+
+    .lang_btn:hover{
+    padding-right: 3rem;
+    border-radius: 7px;
+    background: $blackclr;
+    color: $yellowclr;
+  }
+  
+  // about me page strings and containers 
+
+  .section_lang-nav{
+   grid-row: 1/2;
+    background: $blackclr;
+  }
+
+  .section_bio-text{
+    grid-row: 2/3;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+  
+  .section_bio-text img{
+    position: relative;
+    width: 25rem;
+    padding: 1rem 0 0 0;
+    border-radius: 5px;
+  }
+  
+  .section_skills{
+    grid-row: 3/4;
+    position: relative;
+    background: $blackclr;}
+    
+  .section_skills--title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: 1/2;
+    grid-column: 1/5;
+      h2 {
+        font-size: $title_size;
+        color: $yellowclr;
+        padding-top: 2rem;
+      }
+  }
+
+  .langs_list,.tools_list{
+    display: flex;
+    grid-row: 2/3;
+    flex-flow:column;
+    justify-content: center;
+    align-items: center;
+
+      h3{
+        padding: 2rem;
+      }
+  }
+
+  .langs_list {
+    grid-column: 2/3;
+  }
+
+  .tools_list {
+    grid-column: 3/4;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  ul li {
+    font-size: $p_size;
+    color: $yellowclr;
+    padding:1rem 0;
+  }
+
+
+/**Section My Work**/
+
+.section_works{
+  justify-self: center;
+ bottom: 0;
+  grid-row: 1/2;
+}
+
+.section_works--title{
+  font-size: $title_size - 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-row: 3/4;
+  grid-column: 1/4;
+}
+
+
+// CARDS
+
+.card{
+  grid-row: 2/3;
+  position: relative;
+  padding: 10.5rem 0 0;
+  border-radius: 0.5rem;
+  color: $yellowclr;
+  font-size: 3rem;
+  max-width: 35ch ;
+  overflow: hidden;
+  transition: transform 500ms ease;
+}
+
+// when you hover a card
+
+.card:hover{
+  transform: scale(1.02);
+}
+
+// card insade objects
+
+.card-content{
+  --padding:1.5rem;
+  padding: var(--padding);
+  background: linear-gradient(to top,rgba(0,0,0,1),rgba(0,0,0,0.7),rgba(0,0,0,0.5),rgba(0,0,0,0.2),rgba(0,0,0,0.0));
+  transform: translateY(100%);
+  transition: transform 500ms ease;
+}
+
+.card:hover .card-content{
+  transform: translateY(10%);
+}
+
+.langs_list h3{
+  padding: 0;
+  margin:2.2rem 0 rem 0;
+}
+
+.card-title{
+  font-size: 2rem;
+  margin: 1rem 0;
+  position: relative;
+  width: max-content;
+}
+
+.card-title::after{
+  content:"";
+  position: absolute;
+  height: 4px;
+  left: calc(var(--padding) * -1);
+  bottom: 0;
+  width: calc(100% + var(--padding));
+  background: $yellowclr;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 700ms ease;
+}
+
+.card:hover .card-title::after{
+  transform: scaleX(1);
+}
+
+.card-body{  
+  margin: 1rem 0;}
+
+.card-button{
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  background: mediumspringgreen;
+  color: black;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  padding: .5em 1.25em;
+  border-radius: 0.25em;
+}
+
+.card-button:hover,.card-button:focus{
+  background-color: darkturquoise;
+}
+
+
+.card_one{
+  grid-column: 1/2;
+  background-image: url("https://ichef.bbci.co.uk/news/640/cpsprodpb/76B0/production/_105848303_gettyimages-996540050.jpg");
+  // background: red;
+}
+
+.card_two{
+  grid-column: 2/3;
+
+  background: green;
+}
+
+.card_three{
+  grid-column: 3/4;
+
+  background: blue;
+}
+
+// Footers
+
+.page_three--footer{
+  grid-row: 3/4;
+  background: $blackclr;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.footer_container{
+  display: flex;
+  flex-flow: row;
+}
+
+.page_three--footer h2{
+  color: $yellowclr;
+  font-size: $title_size;
+  padding: 3rem 0;
+}
+
+.footer_container--cards{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 15rem;
+  height: 15rem;
+  background: $yellowclr;
+  border-radius: 5px;
+  margin: 2rem;
+  padding: 2rem;
+}
+
+.footer_container--cards h3{
+  color: $blackclr;
+}
+
+.footer_card--one{
+  position: relative;
+  background-position-y: 80%;
+  background-position-x: 50%;
+  background-size: 10rem;
+  background-repeat: no-repeat;
+  background-image: url(https://image.flaticon.com/icons/png/512/598/598985.png);
+}
+
+
+.footer_card--two{
+  position: relative;
+  background-position-y: 80%;
+  background-position-x: 50%;
+  background-size: 10rem;
+  background-repeat: no-repeat;
+  background-image: url(https://cdn-icons-png.flaticon.com/512/25/25231.png);
+}
+
+
+//scrollbar webkit editor
+
+::-webkit-scrollbar{
+  background: $yellowclr;
+}
+
+::-webkit-scrollbar-track{
+  background: $blackclr;
+}
+// // ::-webkit-scrollbar-corner {
+// //   background: $yellowclr;
+// // }
+::-webkit-scrollbar-thumb{
+  background: $yellowclr;
+}

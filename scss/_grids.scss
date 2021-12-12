@@ -1,0 +1,29 @@
+// Grid 
+
+//Page two
+
+    #page_two--grid{
+        display: grid;
+        grid-template-rows: 5% 50% 45%;
+    }
+
+
+    #section_skills--grid{
+    display: grid;
+    grid-template-rows: 20% 80%;
+    grid-template-columns: 20% 30% 30% 20%;
+    }
+
+//Page three
+
+    #page_three--grid{
+        display: grid;
+        grid-template-rows: 50% 5% 45%;
+    }
+
+    #section_works--grid {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-rows: 15% 70% 15%;
+    position: relative;
+  }

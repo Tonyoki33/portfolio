@@ -35,12 +35,12 @@ $(()=>{
     
     
     // functions
-    const addImg = () => {
-    $(".card_one").css({
-        "background-image":`url(${posts[0].photo})`,
-        "grid-column":"1/2",
-    })}
-    addImg();
+    // const addImg = () => {
+    // $(".card_one").css({
+    //     "background-image":`url(${posts[0].photo})`,
+    //     "grid-column":"1/2",
+    // })}
+    // addImg();
     // events
     
     //// Animations

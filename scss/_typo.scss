@@ -1,0 +1,28 @@
+.section_skills--title,.section_bio-text h2{
+    color: $blackclr;
+    font-size: $title_size;
+}
+h3 {
+    color: $yellowclr;
+    font-size: $subtitle_size;
+}
+
+// Page two typo properties
+
+.section_bio-text h2{
+    font-size: $title_size - 1rem;
+    padding-bottom: 2rem;
+}
+
+.section_bio-text p{
+    line-height: 2rem;
+    max-width: 40rem;
+    color: $blackclr;
+    font-size: $p_size;
+}
+
+.langs_list h3{
+    padding: 0;
+    margin:2.2rem 0 2rem 0;
+  }
+
