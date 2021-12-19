@@ -1,5 +1,3 @@
-
-
 @media (max-width: 1550px) {
     *{
         font-size: 59.7%;
@@ -89,7 +87,6 @@
           }
     
 }
-
 
 @media (max-width: 986px){
     *{
@@ -239,7 +236,7 @@
 
         .card_one{
             background-position: 27%;
-            background-size: 332%;
+            background-size: 350%;
           }
         
         
@@ -251,6 +248,84 @@
           .card:hover .card-content{
             transform: translateY(35%);
           }
+    
+    
+        //typos
+    
+        .section_bio-text p {
+            font-size: 1.5rem;
+        }
+    
+    }
+
+@media(max-width: 480px) and (min-height: 800px){
+
+    *{
+        font-size: 45%;
+    }
+
+    .section_txt{
+        display: flex;
+        flex-flow: column;
+    }
+    
+    .static_txt--en,.static_txt--es{
+        font-size: 5rem;
+        width: 45rem;
+        height: 5rem;
+    }
+    
+    .section_txt .dynamic-txt{
+        width: 45rem;
+        height: 5rem;
+    }
+
+    .section_txt .dynamic-txt li {
+        padding-left: 6.5rem;
+        animation: slide 7s steps(2) infinite;
+        top:-40px;}
+
+        @keyframes slide {
+            100% {
+                top: -246px; } }
+    
+        .section_bio-text{
+            padding: 0 10rem;
+            }
+    
+    
+        //Grids
+        //// Page one
+    
+        //// Page two
+    
+        #page_two--grid{
+            display: grid;
+            grid-template-rows: 5% 55% 40%;
+        }
+    
+        //// Page three
+    
+        // transitions
+    
+        .card{
+            font-size: 6rem;
+        }
+
+        .card_one{
+            background-position: 27%;
+            background-size: 380%;
+            }
+        
+        
+        .card-content{
+            transform: translateY(210%);
+            transition: transform 500ms ease;
+            }
+            
+            .card:hover .card-content{
+            transform: translateY(55%);
+            }
     
     
         //typos
@@ -318,6 +393,7 @@
         .card_one{
             background-position: 30%;
             background-size: 410%;
+            background-repeat: no-repeat;
           }
         
         

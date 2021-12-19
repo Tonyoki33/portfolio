@@ -1,5 +1,8 @@
 // Grid 
-
+ #site_grid{
+     display: grid;
+     grid-template-columns: 10% 80% 10%;
+ }
 //Page two
 
     #page_two--grid{
@@ -19,11 +22,14 @@
     #page_three--grid{
         display: grid;
         grid-template-rows: 50% 5% 45%;
+        grid-template-columns:5% 90% 5%;
     }
 
     #section_works--grid {
     display: grid;
+    grid-column: 2/3;
     grid-template-columns: 33.33% 33.33% 33.33%;
     grid-template-rows: 15% 70% 15%;
+    grid-column-gap: 0.5rem;
     position: relative;
   }

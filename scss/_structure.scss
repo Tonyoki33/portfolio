@@ -17,6 +17,56 @@
       overflow-y: scroll;
   }
 
+  main{
+    grid-column: 2/3;
+  }
+
+  /*Nav section*/
+  nav{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    
+    .social-media,.page-name{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-color: blue;
+    position: relative;
+    width: 10%;
+    height: 100vh;}
+   
+  
+  .social-media{
+    grid-column: 1/2;
+    padding-top: 28rem;
+    a{
+      transition: transform 500ms ease;
+    img{
+      margin-top: 2rem;
+      width: 5rem;
+      
+  }
+  
+}
+  a:hover{
+    transform: scale(1.5);
+  }
+  }
+  .page-name{
+    grid-column: 3/4;
+    background: blueviolet;
+    padding-bottom: 15rem;
+    left: 78.9%;
+    justify-content: flex-end;
+    p{
+      font-size: $title_size;
+      transform: rotate(90deg);
+    }
+  }
+}
+
 
   //pages properties
 
@@ -233,20 +283,13 @@
   grid-row: 1/2;
 }
 
-.section_works--title{
-  font-size: $title_size - 0.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  grid-row: 3/4;
-  grid-column: 1/4;
-}
-
 
 // CARDS
 
 .card{
+  cursor: pointer;
   grid-row: 2/3;
+  grid-column: 2/3;
   position: relative;
   padding: 10.5rem 0 0;
   border-radius: 0.5rem;
@@ -255,6 +298,7 @@
   max-width: 35ch ;
   overflow: hidden;
   transition: transform 500ms ease;
+
 }
 
 // when you hover a card
@@ -371,10 +415,17 @@
   align-items: center;
   width: 15rem;
   height: 15rem;
-  background: $yellowclr;
-  border-radius: 5px;
   margin: 2rem;
   padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 1px 5px 10px $rare_black_clr;
+  background: $yellowclr;
+  cursor: pointer;
+  transition: transform 500ms ease;
+}
+
+.footer_container--cards:hover{
+  transform: scale(1.2);
 }
 
 .footer_container--cards h3{

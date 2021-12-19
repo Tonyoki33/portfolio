@@ -20,6 +20,41 @@ h3 {
   padding: 0;
   margin: 2.2rem 0 2rem 0; }
 
+.section_works--title {
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-row: 1/2;
+  grid-column: 2/3;
+  color: #121301; }
+
+#site_grid {
+  display: grid;
+  grid-template-columns: 10% 80% 10%; }
+
+#page_two--grid {
+  display: grid;
+  grid-template-rows: 5% 50% 45%; }
+
+#section_skills--grid {
+  display: grid;
+  grid-template-rows: 20% 80%;
+  grid-template-columns: 20% 30% 30% 20%; }
+
+#page_three--grid {
+  display: grid;
+  grid-template-rows: 50% 5% 45%;
+  grid-template-columns: 5% 90% 5%; }
+
+#section_works--grid {
+  display: grid;
+  grid-column: 2/3;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  grid-template-rows: 15% 70% 15%;
+  grid-column-gap: 0.5rem;
+  position: relative; }
+
 * {
   margin: 0;
   padding: 0;
@@ -35,6 +70,43 @@ html {
   height: 100vh;
   scroll-snap-type: y mandatory;
   overflow-y: scroll; }
+
+main {
+  grid-column: 2/3; }
+
+/*Nav section*/
+nav {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex; }
+  nav .social-media, nav .page-name {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-color: blue;
+    position: relative;
+    width: 10%;
+    height: 100vh; }
+  nav .social-media {
+    grid-column: 1/2;
+    padding-top: 28rem; }
+    nav .social-media a {
+      transition: transform 500ms ease; }
+      nav .social-media a img {
+        margin-top: 2rem;
+        width: 5rem; }
+    nav .social-media a:hover {
+      transform: scale(1.5); }
+  nav .page-name {
+    grid-column: 3/4;
+    background: blueviolet;
+    padding-bottom: 15rem;
+    left: 78.9%;
+    justify-content: flex-end; }
+    nav .page-name p {
+      font-size: 3.5rem;
+      transform: rotate(90deg); }
 
 .page {
   display: flex;
@@ -215,16 +287,10 @@ ul li {
   bottom: 0;
   grid-row: 1/2; }
 
-.section_works--title {
-  font-size: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  grid-row: 3/4;
-  grid-column: 1/4; }
-
 .card {
+  cursor: pointer;
   grid-row: 2/3;
+  grid-column: 2/3;
   position: relative;
   padding: 10.5rem 0 0;
   border-radius: 0.5rem;
@@ -323,10 +389,16 @@ ul li {
   align-items: center;
   width: 15rem;
   height: 15rem;
-  background: #dddb41;
-  border-radius: 5px;
   margin: 2rem;
-  padding: 2rem; }
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 1px 5px 10px #121301;
+  background: #dddb41;
+  cursor: pointer;
+  transition: transform 500ms ease; }
+
+.footer_container--cards:hover {
+  transform: scale(1.2); }
 
 .footer_container--cards h3 {
   color: #393f03; }
@@ -355,25 +427,6 @@ ul li {
 
 ::-webkit-scrollbar-thumb {
   background: #dddb41; }
-
-#page_two--grid {
-  display: grid;
-  grid-template-rows: 5% 50% 45%; }
-
-#section_skills--grid {
-  display: grid;
-  grid-template-rows: 20% 80%;
-  grid-template-columns: 20% 30% 30% 20%; }
-
-#page_three--grid {
-  display: grid;
-  grid-template-rows: 50% 5% 45%; }
-
-#section_works--grid {
-  display: grid;
-  grid-template-columns: 33.33% 33.33% 33.33%;
-  grid-template-rows: 15% 70% 15%;
-  position: relative; }
 
 @media (max-width: 1550px) {
   * {
@@ -498,12 +551,50 @@ ul li {
     font-size: 6rem; }
   .card_one {
     background-position: 27%;
-    background-size: 332%; }
+    background-size: 350%; }
   .card-content {
     transform: translateY(210%);
     transition: transform 500ms ease; }
   .card:hover .card-content {
     transform: translateY(35%); }
+  .section_bio-text p {
+    font-size: 1.5rem; } }
+
+@media (max-width: 480px) and (min-height: 800px) {
+  * {
+    font-size: 45%; }
+  .section_txt {
+    display: flex;
+    flex-flow: column; }
+  .static_txt--en, .static_txt--es {
+    font-size: 5rem;
+    width: 45rem;
+    height: 5rem; }
+  .section_txt .dynamic-txt {
+    width: 45rem;
+    height: 5rem; }
+  .section_txt .dynamic-txt li {
+    padding-left: 6.5rem;
+    animation: slide 7s steps(2) infinite;
+    top: -40px; }
+  @keyframes slide {
+    100% {
+      top: -246px; } }
+  .section_bio-text {
+    padding: 0 10rem; }
+  #page_two--grid {
+    display: grid;
+    grid-template-rows: 5% 55% 40%; }
+  .card {
+    font-size: 6rem; }
+  .card_one {
+    background-position: 27%;
+    background-size: 380%; }
+  .card-content {
+    transform: translateY(210%);
+    transition: transform 500ms ease; }
+  .card:hover .card-content {
+    transform: translateY(55%); }
   .section_bio-text p {
     font-size: 1.5rem; } }
 
@@ -536,7 +627,8 @@ ul li {
     font-size: 6rem; }
   .card_one {
     background-position: 30%;
-    background-size: 410%; }
+    background-size: 410%;
+    background-repeat: no-repeat; }
   .card-content {
     transform: translateY(210%);
     transition: transform 500ms ease; }
