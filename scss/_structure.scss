@@ -22,6 +22,7 @@
   }
 
   /*Nav section*/
+  
   nav{
     position: fixed;
     width: 100vw;
@@ -32,15 +33,17 @@
     display: flex;
     flex-flow: column;
     align-items: center;
-    background-color: blue;
+    background-color: $rare_black_clr;
     position: relative;
     width: 10%;
-    height: 100vh;}
+    height: 100vh;
+  ;}
    
   
   .social-media{
     grid-column: 1/2;
     padding-top: 28rem;
+    
     a{
       transition: transform 500ms ease;
     img{
@@ -51,19 +54,15 @@
   
 }
   a:hover{
-    transform: scale(1.5);
+    transform: scale(1.1);
   }
   }
   .page-name{
     grid-column: 3/4;
-    background: blueviolet;
-    padding-bottom: 15rem;
+    padding-bottom: 20rem;
     left: 78.9%;
     justify-content: flex-end;
-    p{
-      font-size: $title_size;
-      transform: rotate(90deg);
-    }
+
   }
 }
 
@@ -90,18 +89,18 @@
 .one{
   justify-content: center;
   align-items: center;
-  background-color: $yellowclr;
+  background-color: $whithe_clr;
 }
 
 .two{
-  background-color: $yellowclr;
+  background-color: $whithe_clr;
 }
 
 .three{
   height: 100%;
   width: 100%;
   position: relative;
-  background-color: $yellowclr;
+  background-color: $whithe_clr;
 }
 
 // home page strings and containers
@@ -155,7 +154,7 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background: $yellowclr;
+    background: $whithe_clr;
     border-left: 2px solid $blackclr;
     animation: typing 4s steps(12) infinite; }
   
@@ -168,7 +167,7 @@
     margin-top: 5rem; }
   
   .button {
-    background-color: $yellowclr;
+    background-color: $whithe_clr;
     font-size: $p_size;
     color: $blackclr;
     text-decoration: none;
@@ -184,8 +183,9 @@
   .button:hover{
     padding: 1.2rem;
     border-radius: 7px;
-    background: $blackclr;
-    color: $yellowclr;
+    border: none;
+    background: $strong_clr;
+    color: $whithe_clr;
   }
 
   // making a new button stylish to change the lang_btn
@@ -200,7 +200,7 @@
     padding-right: 3rem;
     border-radius: 7px;
     background: $blackclr;
-    color: $yellowclr;
+    color: $whithe_clr;
   }
   
   // about me page strings and containers 
@@ -239,7 +239,7 @@
     grid-column: 1/5;
       h2 {
         font-size: $title_size;
-        color: $yellowclr;
+        color: $whithe_clr;
         padding-top: 2rem;
       }
   }
@@ -270,7 +270,7 @@
 
   ul li {
     font-size: $p_size;
-    color: $yellowclr;
+    color: $whithe_clr;
     padding:1rem 0;
   }
 
@@ -293,7 +293,7 @@
   position: relative;
   padding: 10.5rem 0 0;
   border-radius: 0.5rem;
-  color: $yellowclr;
+  color: $whithe_clr;
   font-size: 3rem;
   max-width: 35ch ;
   overflow: hidden;
@@ -340,7 +340,7 @@
   left: calc(var(--padding) * -1);
   bottom: 0;
   width: calc(100% + var(--padding));
-  background: $yellowclr;
+  background: $whithe_clr;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 700ms ease;
@@ -404,7 +404,7 @@
 }
 
 .page_three--footer h2{
-  color: $yellowclr;
+  color: $whithe_clr;
   font-size: $title_size;
   padding: 3rem 0;
 }
@@ -419,7 +419,7 @@
   padding: 2rem;
   border-radius: 5px;
   box-shadow: 1px 5px 10px $rare_black_clr;
-  background: $yellowclr;
+  background: $whithe_clr;
   cursor: pointer;
   transition: transform 500ms ease;
 }
@@ -455,15 +455,15 @@
 //scrollbar webkit editor
 
 ::-webkit-scrollbar{
-  background: $yellowclr;
+  background: $whithe_clr;
 }
 
 ::-webkit-scrollbar-track{
   background: $blackclr;
 }
 // // ::-webkit-scrollbar-corner {
-// //   background: $yellowclr;
+// //   background: $whithe_clr;
 // // }
 ::-webkit-scrollbar-thumb{
-  background: $yellowclr;
+  background: $whithe_clr;
 }

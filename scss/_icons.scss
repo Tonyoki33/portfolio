@@ -1,0 +1,19 @@
+/*********************************
+            ICONS
+************************************/
+
+nav{
+    .social-media{
+        a {
+            padding: 1.5rem 0;
+            i {
+                color: $whithe_clr;
+                font-size: $title_size * 1.5;
+            }
+
+            i:hover{
+                color: $strong_clr;
+            }
+        }
+    }
+}

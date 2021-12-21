@@ -186,6 +186,8 @@
         font-size: 45%;
     }
 
+    
+
     .section_txt{
         display: flex;
         flex-flow: column;
@@ -217,6 +219,15 @@
     
     
         //Grids
+
+        #site_grid{
+            grid-template-rows: 10% 90%;
+        }
+
+        .social-media{
+            grid-row: 1/2;
+        }
+
         //// Page one
     
         //// Page two
@@ -373,6 +384,41 @@
     
     
         //Grids
+
+        #site_grid{
+            display: flex;
+        }
+
+        nav{
+            position: fixed;
+            display: flex;
+            background: $rare_black_clr;
+            height: 5%;
+            width: 100%;
+            z-index: 2;
+            top:0; 
+            .social-media{
+                position: relative;
+                display: flex;
+                flex-flow: row;
+                justify-content: center;
+                padding: 0;
+                border: solid 1px olive;
+                background: none;
+                width: 100%;
+                height: 100%;
+                
+                a{i{  
+                    font-size: $title_size;
+                    margin-right: 2rem;
+                }}
+            }
+            .page-name{
+                display: none;
+            }
+
+        }
+
         //// Page one
     
         //// Page two
@@ -415,4 +461,20 @@
     
     }
 
+@media(max-width:375px){
+      
+      .card:hover .card-content{
+        transform: translateY(0%);
+      }
+}
+
+@media(max-width:375px){
+    .card{
+        font-size: 5rem;
+    }
+      
+      .card:hover .card-content{
+        transform: translateY(-18%);
+      }
+}
 

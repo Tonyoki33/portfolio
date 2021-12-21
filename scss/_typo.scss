@@ -3,7 +3,7 @@
     font-size: $title_size;
 }
 h3 {
-    color: $yellowclr;
+    color: $whithe_clr;
     font-size: $subtitle_size;
 }
 
@@ -21,10 +21,24 @@ h3 {
     font-size: $p_size;
 }
 
-.langs_list h3{
-    padding: 0;
-    margin:2.2rem 0 2rem 0;
-  }
+.langs_list {
+
+    h3{
+        padding: 0;
+        margin:2.2rem 0 2rem 0;
+    }
+
+    ul{
+        li{
+            color: $strong_clr;
+        }
+    }
+
+    .strong_p{
+        color: $whithe_clr;
+    }
+
+}
 
 // page three Typo properties
 
@@ -38,3 +52,20 @@ h3 {
     color: $rare_black_clr;
   }
 
+// nav 
+nav {
+    .social-media{
+        h2{
+            font-size: $title_size - 2rem;
+            color: $whithe_clr;
+            text-align: center;
+        }
+    }
+    .page-name{
+        p{
+            font-size: $title_size;
+            transform: rotate(90deg);
+            color: $whithe_clr;
+        }
+    }
+}
