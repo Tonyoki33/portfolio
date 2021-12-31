@@ -265,7 +265,7 @@ nav {
 
 .section_bio-text img {
   position: relative;
-  width: 25rem;
+  width: 19rem;
   padding: 1rem 0 0 0;
   border-radius: 5px; }
 
@@ -486,6 +486,14 @@ ul li {
   @keyframes slide {
     100% {
       top: -220px; } } }
+
+@media (max-width: 1440px) {
+  .card:hover .card-content {
+    transform: translateY(20%); } }
+
+@media (max-width: 1360px) {
+  .card:hover .card-content {
+    transform: translateY(-10%); } }
 
 @media (max-width: 1050px) {
   * {
