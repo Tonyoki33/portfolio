@@ -10,8 +10,7 @@ h3 {
   font-size: 1.4rem; }
 
 .section_bio-text h2 {
-  font-size: 2.5rem;
-  padding-bottom: 2rem; }
+  font-size: 2.5rem; }
 
 .section_bio-text p {
   line-height: 2rem;
@@ -97,7 +96,7 @@ nav .social-media a {
 * {
   margin: 0;
   padding: 0;
-  font-size: 67.5%;
+  font-size: 62.5%;
   box-sizing: border-box;
   font-family: 'Road Rage', cursive;
   font-family: 'Roboto Mono', monospace; }
@@ -173,7 +172,7 @@ nav {
 
 .section_txt {
   display: inline-flex;
-  align-items: center; }
+  align-items: flex-start; }
 
 .section_txt .static_txt--en, .static_txt--es {
   margin-top: 3.5rem;
@@ -195,13 +194,14 @@ nav {
   overflow: hidden; }
 
 .section_txt .dynamic-txt li {
-  list-style: none;
+  position: relative;
   font-size: 7rem;
   font-weight: 500;
   color: #161853;
-  position: relative;
+  list-style: none;
   top: 0;
   cursor: default;
+  border: 2px solid hotpink;
   animation: slide 10s steps(2) infinite; }
 
 .section_txt .dynamic-txt li span {
@@ -290,9 +290,8 @@ nav {
   grid-row: 1/2;
   grid-column: 1/5; }
   .section_skills--title h2 {
-    font-size: 3.5rem;
-    color: #FAEDF0;
-    padding-top: 2rem; }
+    font-size: 1rem;
+    color: #FAEDF0; }
 
 .langs_list, .tools_list {
   display: flex;
@@ -474,21 +473,30 @@ ul li {
 /*FULL SCREEN*/
 @media (max-width: 1440px) {
   .card:hover .card-content {
-    transform: translateY(20%); } }
+    transform: translateY(15%); } }
 
 @media (max-width: 1360px) {
-  * {
-    font-size: 55%; }
   .page {
     overflow: hidden; }
-  .section_txt .static_txt--en, .static_txt--es {
-    margin-top: 4rem; }
   nav .page-name p {
     font-size: 2rem; }
   nav .social-media a {
     padding: 1.5rem 0; }
     nav .social-media a i {
       font-size: 5.25rem; }
+  .static_txt--es {
+    font-size: 4rem; }
+  .section_txt .dynamic-txt li {
+    padding-left: 6.5rem;
+    animation: slide 7s steps(2) infinite;
+    top: -40px; }
+  @keyframes slide {
+    100% {
+      top: -250px; } }
+  .section_bio-text {
+    padding: 0 10rem; }
+  span {
+    padding-left: 6rem; }
   @keyframes slide {
     100% {
       top: -220px; } }
@@ -496,14 +504,81 @@ ul li {
     --padding:1.5rem;
     transform: translateY(120%); }
   .card:hover .card-content {
-    transform: translateY(5%); } }
+    transform: translateY(-15%); } }
 
 /*  IPAD 
             => 
                     MOBILE*/
 @media (max-width: 1024px) {
   * {
-    font-size: 55%; }
+    font-size: 57%; }
+  .page {
+    max-width: 1024px; }
+  #site_grid {
+    display: flex; }
+  nav {
+    position: fixed;
+    display: flex;
+    background: #292C6D;
+    height: 5%;
+    width: 100%;
+    z-index: 2;
+    top: 0; }
+    nav .social-media {
+      position: relative;
+      display: flex;
+      flex-flow: row;
+      justify-content: center;
+      padding: 0;
+      border: solid 1px olive;
+      background: none;
+      width: 100%;
+      height: 100%; }
+      nav .social-media a i {
+        font-size: 3.5rem;
+        margin-right: 2rem; }
+      nav .social-media a h2 {
+        display: none; }
+    nav .page-name {
+      display: none; }
+  .section_bio-text {
+    padding: 0 10rem; }
+  .section_bio-text h2 {
+    font-size: 5rem;
+    padding-bottom: 2rem; }
+  .section_bio-text p {
+    line-height: 2.5rem;
+    max-width: 58rem;
+    font-size: 2.5rem; }
+  .section_skills--title h2 {
+    font-size: 5rem; }
+  .langs_list, .tools_list {
+    justify-content: unset; }
+  .langs_list h3, .tools_list h3 {
+    font-size: 3rem; }
+  .langs_list ul li, .tools_list ul li {
+    line-height: 2.2rem;
+    font-size: 3rem; }
+  .card-content {
+    transform: translateY(140%); }
+    .card-content h2 {
+      font-size: 3rem; }
+    .card-content p {
+      font-size: 2rem; }
+  .card-button {
+    padding: 1em 1.25em;
+    font-size: 2rem; }
+  .card:hover .card-content {
+    transform: translateY(46%); }
+  .card_one {
+    background-size: 280%;
+    background-position-x: 20%; } }
+
+@media (max-width: 768px) {
+  * {
+    font-size: 57%; }
+  .page {
+    max-width: 1024px; }
   #site_grid {
     display: flex; }
   nav {
@@ -532,15 +607,33 @@ ul li {
     nav .page-name {
       display: none; }
   .section_bio-text p {
-    line-height: 2.2rem;
-    font-size: 4rem; }
-  .section_skills--title h2 {
-    padding-top: 9rem; }
+    line-height: 3rem;
+    font-size: 2rem; }
   .langs_list ul li, .tools_list ul li {
     line-height: 2.2rem;
-    font-size: 4rem; }
+    font-size: 2rem; }
+  #section_works--grid {
+    display: flex;
+    flex-flow: column;
+    height: 100vh; }
   .card {
-    font-size: 5rem; }
+    font-size: 4rem; }
+  .card_one, .card_two, .card_three {
+    height: 25rem;
+    margin: 2rem 0;
+    padding: 2rem 0; }
+  .card_one {
+    background-size: 100%;
+    background-position: center; }
+  .card-content {
+    transform: translateY(140%); }
+    .card-content h2 {
+      font-size: 3rem; }
+    .card-content p {
+      font-size: 2rem; }
+  .card-button {
+    padding: 0.5em 1em;
+    font-size: 2rem; }
   .card:hover .card-content {
     transform: translateY(10%); } }
 
@@ -552,45 +645,67 @@ ul li {
     max-width: 414px; }
   .section_txt {
     display: flex;
-    flex-flow: column; } }
-
-.static_txt--en, .static_txt--es {
-  font-size: 5rem;
-  width: 45rem;
-  height: 5rem; }
-
-.section_txt .dynamic-txt {
-  width: 60rem;
-  height: 5rem; }
-
-.section_txt .dynamic-txt li {
-  padding-left: 6.5rem;
-  animation: slide 7s steps(2) infinite;
-  top: -40px; }
-
-@keyframes slide {
-  100% {
-    top: -250px; } }
-
-.section_bio-text {
-  padding: 0 10rem; }
-
-.section_bio-text p {
-  line-height: 2.2rem;
-  font-size: 1.6rem; }
-
-.section_skills--title h2 {
-  padding-top: 9rem; }
-
-.langs_list ul li, .tools_list ul li {
-  line-height: 2.2rem;
-  font-size: 1.6rem; }
-
-.card {
-  font-size: 5rem; }
-
-.card:hover .card-content {
-  transform: translateY(10%); }
+    flex-flow: column; }
+  .button {
+    padding: 2rem;
+    font-size: 1.5rem; }
+  .button:hover {
+    padding: 2.5rem; }
+  .static_txt--en, .static_txt--es {
+    padding-left: 9rem;
+    font-size: 4rem;
+    width: 50rem;
+    height: 5rem; }
+  .static_txt--es {
+    font-size: 4rem; }
+  .section_txt .dynamic-txt {
+    width: 60rem;
+    height: 5rem; }
+  .section_txt .dynamic-txt li {
+    padding-left: 6.5rem;
+    animation: slide 7s steps(2) infinite;
+    top: -40px; }
+  @keyframes slide {
+    100% {
+      top: -250px; } }
+  .section_bio-text {
+    padding: 0 10rem; }
+  .section_bio-text h2 {
+    font-size: 3rem;
+    padding-bottom: 2rem; }
+  .section_bio-text p {
+    line-height: 2.2rem;
+    font-size: 1.8rem; }
+  .section_skills--title h2 {
+    font-size: 3rem; }
+  .langs_list, .tools_list {
+    justify-content: unset; }
+  .langs_list h3, .tools_list h3 {
+    font-size: 1.5rem; }
+  .langs_list ul li, .tools_list ul li {
+    line-height: 2.2rem;
+    font-size: 2rem; }
+  #section_works--grid {
+    display: flex;
+    flex-flow: column;
+    height: 100vh; }
+  .card_one, .card_two, .card_three {
+    height: 25rem;
+    margin: 2rem 0;
+    padding: 2rem 0; }
+  .card {
+    font-size: 4rem; }
+  .card-content {
+    transform: translateY(140%); }
+    .card-content h2 {
+      font-size: 3rem; }
+    .card-content p {
+      font-size: 1.5rem; }
+  .card-button {
+    padding: 0.5em 1em;
+    font-size: 1.5rem; }
+  .card:hover .card-content {
+    transform: translateY(25%); } }
 
 /*IPHONE 6/7/8*/
 @media (max-width: 375px) and (min-height: 667px) {
@@ -601,10 +716,17 @@ ul li {
   .section_txt {
     display: flex;
     flex-flow: column; }
+  .button {
+    padding: 2rem;
+    font-size: 1.5rem; }
+  .button:hover {
+    padding: 2.5rem; }
   .static_txt--en, .static_txt--es {
     font-size: 5rem;
     width: 45rem;
     height: 5rem; }
+  .static_txt--es {
+    font-size: 4rem; }
   .section_txt .dynamic-txt {
     width: 60rem;
     height: 5rem; }
@@ -617,41 +739,38 @@ ul li {
       top: -250px; } }
   .section_bio-text {
     padding: 0 10rem; }
+  .section_bio-text h2 {
+    font-size: 3rem;
+    padding-bottom: 2rem; }
+  .section_bio-text p {
+    line-height: 2.2rem;
+    font-size: 1.8rem; }
+  .section_skills--title h2 {
+    font-size: 3rem; }
+  .langs_list, .tools_list {
+    justify-content: unset; }
+  .langs_list h3, .tools_list h3 {
+    font-size: 1.5rem; }
+  .langs_list ul li, .tools_list ul li {
+    line-height: 2.2rem;
+    font-size: 2rem; }
+  .card_one, .card_two, .card_three {
+    height: 22rem;
+    margin: 2rem 0;
+    padding: 2rem 0; }
   .card {
-    font-size: 5rem; }
+    font-size: 4rem; }
+  .card-content {
+    transform: translateY(140%); }
+    .card-content h2 {
+      font-size: 3rem; }
+    .card-content p {
+      font-size: 1.5rem; }
+  .card-button {
+    padding: 0.5em 1em;
+    font-size: 1.5rem; }
   .card:hover .card-content {
-    transform: translateY(10%); } }
-
-/*IPHONE X*/
-@media (max-width: 375px) and (min-height: 812px) {
-  * {
-    font-size: 35%; }
-  .page {
-    max-width: 375px;
-    overflow: hidden; }
-  .section_txt {
-    display: flex;
-    flex-flow: column; }
-  .static_txt--en, .static_txt--es {
-    font-size: 5rem;
-    width: 45rem;
-    height: 5rem; }
-  .section_txt .dynamic-txt {
-    width: 60rem;
-    height: 5rem; }
-  .section_txt .dynamic-txt li {
-    padding-left: 6.5rem;
-    animation: slide 7s steps(2) infinite;
-    top: -40px; }
-  @keyframes slide {
-    100% {
-      top: -250px; } }
-  .section_bio-text {
-    padding: 0 10rem; }
-  .card {
-    font-size: 5rem; }
-  .card:hover .card-content {
-    transform: translateY(10%); } }
+    transform: translateY(5%); } }
 
 /*IPHONE SE*/
 @media (max-width: 320px) {
@@ -664,6 +783,8 @@ ul li {
     font-size: 5rem;
     width: 45rem;
     height: 5rem; }
+  .static_txt--es {
+    font-size: 4rem; }
   .section_txt .dynamic-txt {
     width: 60rem;
     height: 5rem; }
@@ -676,18 +797,42 @@ ul li {
       top: -250px; } }
   .section_bio-text {
     padding: 0 10rem; }
+  .section_bio-text h2 {
+    font-size: 3rem;
+    padding-bottom: 2rem; }
   .section_bio-text p {
     line-height: 2.2rem;
-    font-size: 1.6rem; }
+    font-size: 1.8rem; }
   .section_skills--title h2 {
-    padding-top: 9rem; }
+    font-size: 3rem; }
+  .langs_list, .tools_list {
+    justify-content: unset; }
+  .langs_list h3, .tools_list h3 {
+    font-size: 1.5rem; }
   .langs_list ul li, .tools_list ul li {
     line-height: 2.2rem;
-    font-size: 1.6rem; }
+    font-size: 2rem; }
+  #section_works--grid {
+    display: flex;
+    flex-flow: column;
+    height: 100vh; }
+  .card_one, .card_two, .card_three {
+    height: 18rem;
+    margin: 2rem 0;
+    padding: 2rem 0; }
   .card {
-    font-size: 5rem; }
+    font-size: 4rem; }
+  .card-content {
+    transform: translateY(140%); }
+    .card-content h2 {
+      font-size: 2.5rem; }
+    .card-content p {
+      font-size: 1.5rem; }
+  .card-button {
+    padding: 0.5em 1em;
+    font-size: 1.5rem; }
   .card:hover .card-content {
-    transform: translateY(-18%); } }
+    transform: translateY(-10%); } }
 
 /*ANDROID LARGE*/
 @media (max-width: 411px) and (min-height: 823px) {
@@ -718,25 +863,44 @@ ul li {
       top: -250px; } }
   .section_bio-text {
     padding: 0 10rem; }
+  .section_bio-text {
+    padding: 0 10rem; }
+  .section_bio-text h2 {
+    font-size: 3rem;
+    padding-bottom: 2rem; }
   .section_bio-text p {
     line-height: 2.2rem;
-    font-size: 1.6rem; }
+    font-size: 2rem; }
   .section_skills--title h2 {
-    padding-top: 9rem; }
+    font-size: 3rem; }
+  .langs_list, .tools_list {
+    justify-content: unset; }
+  .langs_list h3, .tools_list h3 {
+    font-size: 1.5rem; }
   .langs_list ul li, .tools_list ul li {
     line-height: 2.2rem;
-    font-size: 1.6rem; }
+    font-size: 2rem; }
+  #section_works--grid {
+    display: flex;
+    flex-flow: column;
+    height: 100vh; }
+  .card_one, .card_two, .card_three {
+    height: 25rem;
+    margin: 2rem 0;
+    padding: 2rem 0; }
   .card {
     font-size: 4rem; }
+  .card-content {
+    transform: translateY(140%); }
+    .card-content h2 {
+      font-size: 3rem; }
+    .card-content p {
+      font-size: 1.5rem; }
+  .card-button {
+    padding: 0.5em 1em;
+    font-size: 1.5rem; }
   .card:hover .card-content {
-    transform: translateY(-18%); }
-  /* Page 3 grid*/
-  #page_three--grid {
-    height: 100%;
-    width: 400px;
-    display: grid;
-    grid-template-rows: 50% 5% 45%;
-    grid-template-columns: 2.5% 95% 2.5%; } }
+    transform: translateY(0%); } }
 
 /*ANDROID */
 @media (max-width: 411px) and (min-height: 731px) {
@@ -767,7 +931,7 @@ ul li {
     line-height: 2.2rem;
     font-size: 1.6rem; }
   .section_skills--title h2 {
-    padding-top: 9rem; }
+    font-size: 2.5rem; }
   .langs_list ul li, .tools_list ul li {
     line-height: 2.2rem;
     font-size: 1.6rem; }
@@ -775,9 +939,88 @@ ul li {
     font-size: 4rem; }
   .card:hover .card-content {
     transform: translateY(-18%); }
-  /* Page 3 grid*/
-  #page_three--grid {
-    width: 100%;
-    display: grid;
-    grid-template-rows: 50% 5% 45%;
-    grid-template-columns: 5% 90% 5%; } }
+  #section_works--grid {
+    display: flex;
+    flex-flow: column;
+    height: 100vh; }
+  .card_one, .card_two, .card_three {
+    height: 25rem;
+    margin: 2rem 0;
+    padding: 2rem 0; }
+  .card {
+    font-size: 4rem; }
+  .card-content {
+    transform: translateY(140%); }
+    .card-content h2 {
+      font-size: 3rem; }
+    .card-content p {
+      font-size: 1.5rem; }
+  .card-button {
+    padding: 0.5em 1em;
+    font-size: 1.5rem; }
+  .card:hover .card-content {
+    transform: translateY(25%); } }
+
+/*IPHONE X*/
+@media (max-width: 375px) and (min-height: 812px) {
+  * {
+    font-size: 35%; }
+  .page {
+    max-width: 375px;
+    overflow: hidden; }
+  .page_three {
+    max-width: 375px; }
+  .section_txt {
+    display: flex;
+    flex-flow: column; }
+  .button {
+    padding: 2rem;
+    font-size: 1.5rem; }
+  .button:hover {
+    padding: 2.5rem; }
+  .static_txt--en, .static_txt--es {
+    font-size: 5rem;
+    width: 45rem;
+    height: 5rem; }
+  .static_txt--es {
+    font-size: 4rem; }
+  .section_txt .dynamic-txt {
+    width: 60rem;
+    height: 5rem; }
+  .section_txt .dynamic-txt li {
+    padding-left: 6.5rem;
+    animation: slide 7s steps(2) infinite;
+    top: -40px; }
+  @keyframes slide {
+    100% {
+      top: -250px; } }
+  .section_bio-text {
+    padding: 0 10rem; }
+  .section_bio-text h2 {
+    font-size: 4rem;
+    padding-bottom: 2rem; }
+  .section_bio-text p {
+    line-height: 2.5rem;
+    font-size: 2.2rem; }
+  .section_skills--title h2 {
+    font-size: 4rem; }
+  .langs_list, .tools_list {
+    justify-content: unset; }
+  .langs_list h3, .tools_list h3 {
+    font-size: 1.8rem; }
+  .langs_list ul li, .tools_list ul li {
+    line-height: 2.2rem;
+    font-size: 2.2rem; }
+  .card {
+    font-size: 5rem; }
+  .card-content {
+    transform: translateY(140%); }
+    .card-content h2 {
+      font-size: 3rem; }
+    .card-content p {
+      font-size: 2rem; }
+  .card-button {
+    padding: 0.5em 1em;
+    font-size: 2rem; }
+  .card:hover .card-content {
+    transform: translateY(5%); } }
