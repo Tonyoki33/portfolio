@@ -201,7 +201,6 @@ nav {
   list-style: none;
   top: 0;
   cursor: default;
-  border: 2px solid hotpink;
   animation: slide 10s steps(2) infinite; }
 
 .section_txt .dynamic-txt li span {
@@ -404,7 +403,8 @@ ul li {
 
 .card_three {
   grid-column: 3/4;
-  background: blue; }
+  background-image: url("https://lh3.googleusercontent.com/DtY7SBb3Pz-cDYbZy1jTMLFhoCYfych8R5vmEjE8Qmo9A8s0MGDZYdGzIzElE-JOwS0y=s85");
+  background-size: 20%; }
 
 .page_three--footer {
   grid-row: 3/4;
@@ -484,38 +484,58 @@ ul li {
     padding: 1.5rem 0; }
     nav .social-media a i {
       font-size: 5.25rem; }
-  .static_txt--es {
+  /*First page*/
+  .section_txt .static_txt--en, .section_txt .static_txt--es {
+    font-size: 4rem;
+    width: 45rem;
+    height: 5rem;
+    margin-top: 3.7rem;
+    text-align: end; }
+  .section_txt .static_txt--es {
     font-size: 4rem; }
+  .section_txt .dynamic-txt {
+    overflow: hidden; }
   .section_txt .dynamic-txt li {
-    padding-left: 6.5rem;
     animation: slide 7s steps(2) infinite;
-    top: -40px; }
-  @keyframes slide {
-    100% {
-      top: -250px; } }
-  .section_bio-text {
-    padding: 0 10rem; }
-  span {
-    padding-left: 6rem; }
+    top: 3px; }
   @keyframes slide {
     100% {
       top: -220px; } }
+  /*Second Page*/
+  .section_bio-text {
+    padding: 0 10rem; }
+  .section_bio-text h2 {
+    font-size: 3rem;
+    padding-bottom: 2rem; }
+  .section_bio-text p {
+    line-height: 2rem;
+    max-width: 58rem;
+    font-size: 1.5rem; }
+  .section_skills--title h2 {
+    font-size: 3rem; }
+  .langs_list, .tools_list {
+    justify-content: unset; }
+  .langs_list h3, .tools_list h3 {
+    font-size: 2rem;
+    margin: 0 0 0 0;
+    padding: 0; }
+  .langs_list ul li, .tools_list ul li {
+    line-height: 1.5rem;
+    font-size: 1.5rem; }
   .card-content {
     --padding:1.5rem;
     transform: translateY(120%); }
   .card:hover .card-content {
     transform: translateY(-15%); } }
 
-/*  IPAD 
+/*  IPAD pro
             => 
                     MOBILE*/
 @media (max-width: 1024px) {
   * {
-    font-size: 57%; }
+    font-size: 60%; }
   .page {
     max-width: 1024px; }
-  #site_grid {
-    display: flex; }
   nav {
     position: fixed;
     display: flex;
@@ -541,6 +561,31 @@ ul li {
         display: none; }
     nav .page-name {
       display: none; }
+  /*First page*/
+  #site_grid {
+    display: flex; }
+  .section_txt .static_txt--en, .section_txt .static_txt--es {
+    font-size: 4.3rem;
+    width: 45rem;
+    height: 5rem;
+    margin-top: 3.7rem;
+    text-align: end; }
+  .section_txt .static_txt--es {
+    font-size: 4rem; }
+  .section_txt .dynamic-txt {
+    overflow: hidden; }
+  .section_txt .dynamic-txt li {
+    animation: slide 7s steps(2) infinite;
+    top: 4.1px; }
+  @keyframes slide {
+    100% {
+      top: -225px; } }
+  .button {
+    padding: 2rem;
+    font-size: 2rem; }
+  .button:hover {
+    padding: 2.5rem; }
+  /*Second Page*/
   .section_bio-text {
     padding: 0 10rem; }
   .section_bio-text h2 {
@@ -550,6 +595,9 @@ ul li {
     line-height: 2.5rem;
     max-width: 58rem;
     font-size: 2.5rem; }
+  .section_bio-text img {
+    margin-top: 2rem;
+    width: 30rem; }
   .section_skills--title h2 {
     font-size: 5rem; }
   .langs_list, .tools_list {
@@ -557,8 +605,9 @@ ul li {
   .langs_list h3, .tools_list h3 {
     font-size: 3rem; }
   .langs_list ul li, .tools_list ul li {
-    line-height: 2.2rem;
+    line-height: 3.5rem;
     font-size: 3rem; }
+  /* Page three*/
   .card-content {
     transform: translateY(140%); }
     .card-content h2 {
@@ -574,44 +623,64 @@ ul li {
     background-size: 280%;
     background-position-x: 20%; } }
 
+/*Ipad*/
 @media (max-width: 768px) {
   * {
     font-size: 57%; }
   .page {
     max-width: 1024px; }
+  /*Nav*/
+  nav {
+    height: 7%; }
+    nav .social-media a i {
+      font-size: 4.5rem; }
+  /*First page*/
   #site_grid {
     display: flex; }
-  nav {
-    position: fixed;
-    display: flex;
-    background: #292C6D;
-    height: 5%;
-    width: 100%;
-    z-index: 2;
-    top: 0; }
-    nav .social-media {
-      position: relative;
-      display: flex;
-      flex-flow: row;
-      justify-content: center;
-      padding: 0;
-      border: solid 1px olive;
-      background: none;
-      width: 100%;
-      height: 100%; }
-      nav .social-media a i {
-        font-size: 3.5rem;
-        margin-right: 2rem; }
-      nav .social-media a h2 {
-        display: none; }
-    nav .page-name {
-      display: none; }
+  .section_txt .static_txt--en, .section_txt .static_txt--es {
+    font-size: 4.3rem;
+    width: 45rem;
+    height: 5rem;
+    margin-top: 3.7rem;
+    text-align: end; }
+  .section_txt .static_txt--es {
+    font-size: 4rem; }
+  .section_txt .dynamic-txt {
+    overflow: hidden; }
+  .section_txt .dynamic-txt li {
+    animation: slide 7s steps(2) infinite;
+    top: -0.5px; }
+  @keyframes slide {
+    100% {
+      top: -221.7px; } }
+  .button {
+    padding: 2rem;
+    font-size: 2rem; }
+  .button:hover {
+    padding: 2.5rem; }
+  /*Second Page*/
+  .section_bio-text {
+    padding: 0 10rem; }
+  .section_bio-text h2 {
+    font-size: 5rem;
+    padding-bottom: 2rem; }
   .section_bio-text p {
-    line-height: 3rem;
-    font-size: 2rem; }
+    line-height: 2.5rem;
+    max-width: 58rem;
+    font-size: 2.5rem; }
+  .section_bio-text img {
+    margin-top: 2rem;
+    width: 30rem; }
+  .section_skills--title h2 {
+    font-size: 5rem; }
+  .langs_list, .tools_list {
+    justify-content: unset; }
+  .langs_list h3, .tools_list h3 {
+    font-size: 2.3rem; }
   .langs_list ul li, .tools_list ul li {
+    margin: 2.2rem 0 0 0;
     line-height: 2.2rem;
-    font-size: 2rem; }
+    font-size: 2.5rem; }
   #section_works--grid {
     display: flex;
     flex-flow: column;
@@ -643,31 +712,33 @@ ul li {
     font-size: 45%; }
   .page {
     max-width: 414px; }
+  /* First page*/
   .section_txt {
     display: flex;
     flex-flow: column; }
+    .section_txt .static_txt--en, .section_txt .static_txt--es {
+      font-size: 4.3rem;
+      width: 45rem;
+      height: 5rem;
+      margin-top: 3.7rem;
+      padding-right: 2rem;
+      text-align: end; }
+    .section_txt .static_txt--es {
+      font-size: 4rem; }
+    .section_txt .dynamic-txt {
+      overflow: hidden; }
+    .section_txt .dynamic-txt li {
+      animation: slide 7s steps(2) infinite;
+      top: -4rem;
+      padding: 0 0 0 2rem; }
+  @keyframes slide {
+    100% {
+      top: -210px; } }
   .button {
     padding: 2rem;
     font-size: 1.5rem; }
   .button:hover {
     padding: 2.5rem; }
-  .static_txt--en, .static_txt--es {
-    padding-left: 9rem;
-    font-size: 4rem;
-    width: 50rem;
-    height: 5rem; }
-  .static_txt--es {
-    font-size: 4rem; }
-  .section_txt .dynamic-txt {
-    width: 60rem;
-    height: 5rem; }
-  .section_txt .dynamic-txt li {
-    padding-left: 6.5rem;
-    animation: slide 7s steps(2) infinite;
-    top: -40px; }
-  @keyframes slide {
-    100% {
-      top: -250px; } }
   .section_bio-text {
     padding: 0 10rem; }
   .section_bio-text h2 {
@@ -707,36 +778,200 @@ ul li {
   .card:hover .card-content {
     transform: translateY(25%); } }
 
+/*ANDROID */
+@media (max-width: 411px) and (min-height: 731px) {
+  * {
+    font-size: 45%; }
+  .page {
+    max-width: 411px; }
+  /* First page*/
+  .section_txt {
+    display: flex;
+    flex-flow: column; }
+    .section_txt .static_txt--en, .section_txt .static_txt--es {
+      font-size: 3.5rem;
+      width: 45rem;
+      height: 5rem;
+      margin-top: 3.7rem;
+      padding: 0 0 0 0;
+      text-align: center; }
+    .section_txt .static_txt--es {
+      font-size: 4rem; }
+    .section_txt .dynamic-txt {
+      overflow: hidden; }
+      .section_txt .dynamic-txt li {
+        animation: slide 7s steps(2) infinite; }
+      .section_txt .dynamic-txt span {
+        top: -6rem;
+        padding: 0 0 0 5rem; }
+  @keyframes slide {
+    100% {
+      top: -210px; } }
+  .button {
+    padding: 2rem;
+    font-size: 1.7rem; }
+  .button:hover {
+    padding: 2.5rem; }
+  /*Second Page*/
+  .section_bio-text {
+    padding: 0 10rem; }
+    .section_bio-text h2 {
+      font-size: 3rem;
+      padding-bottom: 2rem; }
+    .section_bio-text p {
+      line-height: 2rem;
+      font-size: 2rem; }
+    .section_bio-text img {
+      margin-top: 2rem;
+      width: 25rem; }
+  .section_skills--title h2 {
+    font-size: 3rem; }
+  .langs_list, .tools_list {
+    justify-content: unset; }
+  .langs_list h3, .tools_list h3 {
+    font-size: 1.6rem; }
+  .langs_list ul li, .tools_list ul li {
+    margin: 2.2rem 0 0 0;
+    line-height: 2.2rem;
+    font-size: 2rem; }
+  /*Page three*/
+  .card {
+    font-size: 4rem; }
+  .card:hover .card-content {
+    transform: translateY(-18%); }
+  #section_works--grid {
+    display: flex;
+    flex-flow: column;
+    height: 100vh; }
+  .card_one, .card_two, .card_three {
+    height: 25rem;
+    margin: 2rem 0;
+    padding: 2rem 0; }
+  .card {
+    font-size: 4rem; }
+  .card-content {
+    transform: translateY(140%); }
+    .card-content h2 {
+      font-size: 3rem; }
+    .card-content p {
+      font-size: 1.5rem; }
+  .card-button {
+    padding: 0.5em 1em;
+    font-size: 1.5rem; }
+  .card:hover .card-content {
+    transform: translateY(25%); } }
+
+/*ANDROID LARGE*/
+@media (max-width: 411px) and (min-height: 823px) {
+  * {
+    font-size: 45%; }
+  .page {
+    max-width: 411px; }
+  .three {
+    height: 100%;
+    width: 400px; }
+  /* First page*/
+  .section_txt {
+    display: flex;
+    flex-flow: column; }
+    .section_txt .static_txt--en, .section_txt .static_txt--es {
+      font-size: 3.5rem;
+      width: 45rem;
+      height: 5rem;
+      margin-top: 3.7rem;
+      padding: 0;
+      text-align: center; }
+    .section_txt .static_txt--es {
+      font-size: 4rem; }
+    .section_txt .dynamic-txt {
+      overflow: hidden; }
+      .section_txt .dynamic-txt li {
+        animation: slide 7s steps(2) infinite; }
+      .section_txt .dynamic-txt span {
+        top: -0rem;
+        padding: 0 0 0 3rem; }
+  @keyframes slide {
+    100% {
+      top: -210px; } }
+  .button {
+    padding: 2rem;
+    font-size: 2rem; }
+  .button:hover {
+    padding: 2.5rem; }
+  /*Second Page*/
+  .section_bio-text {
+    padding: 0 10rem; }
+  .section_bio-text h2 {
+    font-size: 3rem;
+    padding-bottom: 2rem; }
+  .section_bio-text p {
+    line-height: 2.2rem;
+    font-size: 2rem; }
+  .section_skills--title h2 {
+    font-size: 3rem; }
+  .langs_list, .tools_list {
+    justify-content: unset; }
+  .langs_list h3, .tools_list h3 {
+    font-size: 1.5rem; }
+  .langs_list ul li, .tools_list ul li {
+    line-height: 2.2rem;
+    font-size: 2rem; }
+  /*Page Three*/
+  #section_works--grid {
+    display: flex;
+    flex-flow: column;
+    height: 100vh; }
+  .card_one, .card_two, .card_three {
+    height: 25rem;
+    margin: 2rem 0;
+    padding: 2rem 0; }
+  .card {
+    font-size: 4rem; }
+  .card-content {
+    transform: translateY(140%); }
+    .card-content h2 {
+      font-size: 3rem; }
+    .card-content p {
+      font-size: 1.5rem; }
+  .card-button {
+    padding: 0.5em 1em;
+    font-size: 1.5rem; }
+  .card:hover .card-content {
+    transform: translateY(21%); } }
+
 /*IPHONE 6/7/8*/
 @media (max-width: 375px) and (min-height: 667px) {
   * {
     font-size: 40%; }
   .page {
     max-width: 375px; }
+  /* First page*/
   .section_txt {
     display: flex;
     flex-flow: column; }
+    .section_txt .static_txt--en, .section_txt .static_txt--es {
+      font-size: 4.3rem;
+      width: 45rem;
+      height: 5rem;
+      margin-top: 3.7rem;
+      padding-right: 2rem;
+      text-align: end; }
+    .section_txt .static_txt--es {
+      font-size: 4rem; }
+    .section_txt .dynamic-txt {
+      overflow: hidden; }
+    .section_txt .dynamic-txt li {
+      animation: slide 7s steps(2) infinite;
+      top: -4rem;
+      padding: 0 0 0 2rem; }
+  @keyframes slide {
+    100% {
+      top: -210px; } }
   .button {
     padding: 2rem;
     font-size: 1.5rem; }
   .button:hover {
     padding: 2.5rem; }
-  .static_txt--en, .static_txt--es {
-    font-size: 5rem;
-    width: 45rem;
-    height: 5rem; }
-  .static_txt--es {
-    font-size: 4rem; }
-  .section_txt .dynamic-txt {
-    width: 60rem;
-    height: 5rem; }
-  .section_txt .dynamic-txt li {
-    padding-left: 6.5rem;
-    animation: slide 7s steps(2) infinite;
-    top: -40px; }
-  @keyframes slide {
-    100% {
-      top: -250px; } }
   .section_bio-text {
     padding: 0 10rem; }
   .section_bio-text h2 {
@@ -776,33 +1011,46 @@ ul li {
 @media (max-width: 320px) {
   * {
     font-size: 35%; }
+  /* First page*/
   .section_txt {
     display: flex;
     flex-flow: column; }
-  .static_txt--en, .static_txt--es {
-    font-size: 5rem;
-    width: 45rem;
-    height: 5rem; }
-  .static_txt--es {
-    font-size: 4rem; }
-  .section_txt .dynamic-txt {
-    width: 60rem;
-    height: 5rem; }
-  .section_txt .dynamic-txt li {
-    padding-left: 6.5rem;
-    animation: slide 7s steps(2) infinite;
-    top: -40px; }
+    .section_txt .static_txt--en, .section_txt .static_txt--es {
+      font-size: 4.3rem;
+      width: 45rem;
+      height: 5rem;
+      margin-top: 3.7rem;
+      padding-right: 3rem;
+      text-align: end; }
+    .section_txt .static_txt--es {
+      font-size: 4rem; }
+    .section_txt .dynamic-txt {
+      overflow: hidden; }
+    .section_txt .dynamic-txt li {
+      animation: slide 7s steps(2) infinite;
+      top: -4rem;
+      font-size: 8rem;
+      padding: 0 0 0 3rem; }
   @keyframes slide {
     100% {
-      top: -250px; } }
+      top: -210px; } }
+  .button {
+    padding: 2rem;
+    font-size: 1.7rem; }
+  .button:hover {
+    padding: 2.5rem; }
+  /*Second page*/
   .section_bio-text {
     padding: 0 10rem; }
-  .section_bio-text h2 {
-    font-size: 3rem;
-    padding-bottom: 2rem; }
-  .section_bio-text p {
-    line-height: 2.2rem;
-    font-size: 1.8rem; }
+    .section_bio-text h2 {
+      font-size: 3rem;
+      padding-bottom: 2rem; }
+    .section_bio-text p {
+      line-height: 2.2rem;
+      font-size: 1.8rem; }
+    .section_bio-text img {
+      margin-top: 2rem;
+      width: 25rem; }
   .section_skills--title h2 {
     font-size: 3rem; }
   .langs_list, .tools_list {
@@ -834,133 +1082,6 @@ ul li {
   .card:hover .card-content {
     transform: translateY(-10%); } }
 
-/*ANDROID LARGE*/
-@media (max-width: 411px) and (min-height: 823px) {
-  * {
-    font-size: 45%; }
-  .page {
-    max-width: 411px; }
-  .three {
-    height: 100%;
-    width: 400px; }
-  .section_txt {
-    display: flex;
-    flex-flow: column; }
-  .static_txt--en, .static_txt--es {
-    font-size: 5rem;
-    width: 45rem;
-    height: 5rem; }
-  .section_txt .dynamic-txt {
-    width: 60rem;
-    height: 5rem;
-    border: 1px solid hotpink; }
-  .section_txt .dynamic-txt li {
-    padding-left: 6.5rem;
-    animation: slide 7s steps(2) infinite;
-    top: -40px; }
-  @keyframes slide {
-    100% {
-      top: -250px; } }
-  .section_bio-text {
-    padding: 0 10rem; }
-  .section_bio-text {
-    padding: 0 10rem; }
-  .section_bio-text h2 {
-    font-size: 3rem;
-    padding-bottom: 2rem; }
-  .section_bio-text p {
-    line-height: 2.2rem;
-    font-size: 2rem; }
-  .section_skills--title h2 {
-    font-size: 3rem; }
-  .langs_list, .tools_list {
-    justify-content: unset; }
-  .langs_list h3, .tools_list h3 {
-    font-size: 1.5rem; }
-  .langs_list ul li, .tools_list ul li {
-    line-height: 2.2rem;
-    font-size: 2rem; }
-  #section_works--grid {
-    display: flex;
-    flex-flow: column;
-    height: 100vh; }
-  .card_one, .card_two, .card_three {
-    height: 25rem;
-    margin: 2rem 0;
-    padding: 2rem 0; }
-  .card {
-    font-size: 4rem; }
-  .card-content {
-    transform: translateY(140%); }
-    .card-content h2 {
-      font-size: 3rem; }
-    .card-content p {
-      font-size: 1.5rem; }
-  .card-button {
-    padding: 0.5em 1em;
-    font-size: 1.5rem; }
-  .card:hover .card-content {
-    transform: translateY(0%); } }
-
-/*ANDROID */
-@media (max-width: 411px) and (min-height: 731px) {
-  * {
-    font-size: 45%; }
-  .page {
-    max-width: 411px; }
-  .section_txt {
-    display: flex;
-    flex-flow: column; }
-  .static_txt--en, .static_txt--es {
-    font-size: 5rem;
-    width: 45rem;
-    height: 5rem; }
-  .section_txt .dynamic-txt {
-    width: 60rem;
-    height: 5rem; }
-  .section_txt .dynamic-txt li {
-    padding-left: 6.5rem;
-    animation: slide 7s steps(2) infinite;
-    top: -40px; }
-  @keyframes slide {
-    100% {
-      top: -250px; } }
-  .section_bio-text {
-    padding: 0 10rem; }
-  .section_bio-text p {
-    line-height: 2.2rem;
-    font-size: 1.6rem; }
-  .section_skills--title h2 {
-    font-size: 2.5rem; }
-  .langs_list ul li, .tools_list ul li {
-    line-height: 2.2rem;
-    font-size: 1.6rem; }
-  .card {
-    font-size: 4rem; }
-  .card:hover .card-content {
-    transform: translateY(-18%); }
-  #section_works--grid {
-    display: flex;
-    flex-flow: column;
-    height: 100vh; }
-  .card_one, .card_two, .card_three {
-    height: 25rem;
-    margin: 2rem 0;
-    padding: 2rem 0; }
-  .card {
-    font-size: 4rem; }
-  .card-content {
-    transform: translateY(140%); }
-    .card-content h2 {
-      font-size: 3rem; }
-    .card-content p {
-      font-size: 1.5rem; }
-  .card-button {
-    padding: 0.5em 1em;
-    font-size: 1.5rem; }
-  .card:hover .card-content {
-    transform: translateY(25%); } }
-
 /*IPHONE X*/
 @media (max-width: 375px) and (min-height: 812px) {
   * {
@@ -970,30 +1091,36 @@ ul li {
     overflow: hidden; }
   .page_three {
     max-width: 375px; }
+  /* First page*/
   .section_txt {
     display: flex;
     flex-flow: column; }
-  .button {
-    padding: 2rem;
-    font-size: 1.5rem; }
-  .button:hover {
-    padding: 2.5rem; }
-  .static_txt--en, .static_txt--es {
-    font-size: 5rem;
-    width: 45rem;
-    height: 5rem; }
-  .static_txt--es {
-    font-size: 4rem; }
-  .section_txt .dynamic-txt {
-    width: 60rem;
-    height: 5rem; }
-  .section_txt .dynamic-txt li {
-    padding-left: 6.5rem;
-    animation: slide 7s steps(2) infinite;
-    top: -40px; }
+    .section_txt .static_txt--en, .section_txt .static_txt--es {
+      font-size: 4.5rem;
+      width: 48rem;
+      height: 5rem;
+      margin-top: 3.7rem;
+      padding: 0 0 0 5rem;
+      text-align: center; }
+    .section_txt .static_txt--es {
+      font-size: 4rem; }
+    .section_txt .dynamic-txt {
+      overflow: hidden; }
+      .section_txt .dynamic-txt span {
+        padding-left: 10rem; }
+    .section_txt .dynamic-txt li {
+      font-size: 9rem;
+      animation: slide 7s steps(2) infinite;
+      top: 1rem;
+      padding: 0 10rem 0 0; }
   @keyframes slide {
     100% {
-      top: -250px; } }
+      top: -180px; } }
+  .button {
+    padding: 2rem;
+    font-size: 2rem; }
+  .button:hover {
+    padding: 2.5rem; }
   .section_bio-text {
     padding: 0 10rem; }
   .section_bio-text h2 {
@@ -1023,4 +1150,4 @@ ul li {
     padding: 0.5em 1em;
     font-size: 2rem; }
   .card:hover .card-content {
-    transform: translateY(5%); } }
+    transform: translateY(-5%); } }
