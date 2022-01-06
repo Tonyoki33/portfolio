@@ -273,7 +273,7 @@ nav {
 
 .section_bio-text img {
   position: relative;
-  width: 19rem;
+  width: 12rem;
   padding: 1rem 0 0 0;
   border-radius: 5px; }
 
@@ -670,7 +670,7 @@ ul li {
     font-size: 2.5rem; }
   .section_bio-text img {
     margin-top: 2rem;
-    width: 30rem; }
+    width: 18rem; }
   .section_skills--title h2 {
     font-size: 5rem; }
   .langs_list, .tools_list {
@@ -747,6 +747,8 @@ ul li {
   .section_bio-text p {
     line-height: 2.2rem;
     font-size: 1.8rem; }
+  .section_bio-text img {
+    width: 15rem; }
   .section_skills--title h2 {
     font-size: 3rem; }
   .langs_list, .tools_list {
@@ -823,7 +825,7 @@ ul li {
       font-size: 2rem; }
     .section_bio-text img {
       margin-top: 2rem;
-      width: 25rem; }
+      width: 15rem; }
   .section_skills--title h2 {
     font-size: 3rem; }
   .langs_list, .tools_list {
@@ -1050,7 +1052,7 @@ ul li {
       font-size: 1.8rem; }
     .section_bio-text img {
       margin-top: 2rem;
-      width: 25rem; }
+      width: 15rem; }
   .section_skills--title h2 {
     font-size: 3rem; }
   .langs_list, .tools_list {
