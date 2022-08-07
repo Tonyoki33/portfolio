@@ -66,18 +66,10 @@ nav .page-name p {
   grid-template-rows: 20% 80%;
   grid-template-columns: 20% 30% 30% 20%; }
 
-#page_three--grid {
-  display: grid;
-  grid-template-rows: 50% 5% 45%;
-  grid-template-columns: 5% 90% 5%; }
-
 #section_works--grid {
-  display: grid;
-  grid-column: 2/3;
-  grid-template-columns: 33.33% 33.33% 33.33%;
-  grid-template-rows: 15% 70% 15%;
-  grid-column-gap: 0.5rem;
-  position: relative; }
+  display: flex;
+  flex-flow: row wrap;
+  margin: 2rem; }
 
 /*********************************
             ICONS
@@ -323,8 +315,9 @@ ul li {
 
 .card {
   cursor: pointer;
-  grid-row: 2/3;
-  grid-column: 2/3;
+  margin: 2rem;
+  height: 25rem;
+  width: 30rem;
   position: relative;
   padding: 10.5rem 0 0;
   border-radius: 0.5rem;
@@ -403,8 +396,7 @@ ul li {
 
 .card_three {
   grid-column: 3/4;
-  background-image: url("https://lh3.googleusercontent.com/DtY7SBb3Pz-cDYbZy1jTMLFhoCYfych8R5vmEjE8Qmo9A8s0MGDZYdGzIzElE-JOwS0y=s85");
-  background-size: 20%; }
+  background-image: url(../media/nogtech_proj.jpg); }
 
 .page_three--footer {
   grid-row: 3/4;
