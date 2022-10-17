@@ -383,11 +383,9 @@ ul li {
   background-color: darkturquoise; }
 
 .card_one {
-  grid-column: 1/2;
   background-image: url("https://ichef.bbci.co.uk/news/640/cpsprodpb/76B0/production/_105848303_gettyimages-996540050.jpg"); }
 
 .card_two {
-  grid-column: 2/3;
   background-color: black;
   background-image: url("https://tierragamer.com/wp-content/uploads/2017/12/Pong.jpg");
   background-size: 100%;
@@ -395,7 +393,9 @@ ul li {
   background-repeat: no-repeat; }
 
 .card_three {
-  grid-column: 3/4;
+  background-image: url(../media/nogtech_proj.jpg); }
+
+.card_four {
   background-image: url(../media/nogtech_proj.jpg); }
 
 .page_three--footer {

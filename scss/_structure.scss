@@ -1,7 +1,12 @@
+/***********************************************************
+                          STRUCTURE
+************************************************************/
+
+
 * {
     margin: 0;
     padding: 0;
-    font-size: 67.5%;
+    font-size: 62.5%;
     box-sizing: border-box;
     font-family: 'Road Rage', cursive;
     font-family: 'Roboto Mono', monospace; }
@@ -107,7 +112,7 @@
 
   .section_txt {
     display: inline-flex; 
-    align-items: center;}
+    align-items: flex-start;}
     
     .section_txt .static_txt--en,.static_txt--es {
       margin-top: 3.5rem;
@@ -130,18 +135,20 @@
     margin-left: 1rem;
     height: 80px;
     line-height: 80px;
-    overflow: hidden; }
+    overflow: hidden; 
+  }
     .section_txt .dynamic-txt li {
-      list-style: none;
+      position: relative;
       font-size: $display_sizes;
       font-weight: 500;
       color: $blackclr;
-      position: relative;
+      list-style: none;
       top: 0;
       cursor: default;
       animation: slide 10s steps(2) infinite; }
-      .section_txt .dynamic-txt li span {
-        position: relative; }
+    .section_txt .dynamic-txt li span {
+      position: relative; }
+      
   
   @keyframes slide {
     100% {
@@ -221,7 +228,7 @@
   
   .section_bio-text img{
     position: relative;
-    width: 25rem;
+    width: 12rem;
     padding: 1rem 0 0 0;
     border-radius: 5px;
   }
@@ -238,9 +245,8 @@
     grid-row: 1/2;
     grid-column: 1/5;
       h2 {
-        font-size: $title_size;
+        font-size: 1rem;
         color: $whithe_clr;
-        padding-top: 2rem;
       }
   }
 
@@ -288,8 +294,9 @@
 
 .card{
   cursor: pointer;
-  grid-row: 2/3;
-  grid-column: 2/3;
+  margin: 2rem;
+  height: 25rem;
+  width: 30rem;
   position: relative;
   padding: 10.5rem 0 0;
   border-radius: 0.5rem;
@@ -371,21 +378,26 @@
 
 
 .card_one{
-  grid-column: 1/2;
   background-image: url("https://ichef.bbci.co.uk/news/640/cpsprodpb/76B0/production/_105848303_gettyimages-996540050.jpg");
   // background: red;
 }
 
 .card_two{
-  grid-column: 2/3;
-
-  background: green;
+  background-color: black;
+  background-image: url("https://tierragamer.com/wp-content/uploads/2017/12/Pong.jpg");
+  background-size: 100%;
+  background-position-y: 50%;
+  background-repeat: no-repeat;
 }
 
 .card_three{
-  grid-column: 3/4;
+  background-image: url(../media/nogtech_proj.jpg);
+  // background-size: 20%;
+}
 
-  background: blue;
+.card_four{
+  background-image: url(../media/nogtech_proj.jpg);
+  // background-size: 20%;
 }
 
 // Footers
