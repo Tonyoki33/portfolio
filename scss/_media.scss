@@ -5,8 +5,31 @@
 /*FULL SCREEN*/
 @media (max-width: 1440px){
     .card:hover .card-content{
-      transform: translateY(15%);
+      transform: translateY(-15%);
     }
+
+/*First page*/
+.section_txt{
+    .static_txt--en,.static_txt--es{
+        font-size: 4rem;
+        width: 45rem;
+        height: 5rem;
+        margin-top: 3rem;
+        text-align: end;
+    }
+    .static_txt--es{
+        font-size: 4rem;
+        }
+    .dynamic-txt{
+        overflow: hidden;
+    }
+    .dynamic-txt li {
+        animation: slide 7s steps(2) infinite;
+        top:-2px;
+    ;}
+
+}
+
    }
 
 @media (max-width: 1360px){

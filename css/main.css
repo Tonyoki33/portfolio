@@ -465,7 +465,21 @@ ul li {
 /*FULL SCREEN*/
 @media (max-width: 1440px) {
   .card:hover .card-content {
-    transform: translateY(15%); } }
+    transform: translateY(-15%); }
+  /*First page*/
+  .section_txt .static_txt--en, .section_txt .static_txt--es {
+    font-size: 4rem;
+    width: 45rem;
+    height: 5rem;
+    margin-top: 3rem;
+    text-align: end; }
+  .section_txt .static_txt--es {
+    font-size: 4rem; }
+  .section_txt .dynamic-txt {
+    overflow: hidden; }
+  .section_txt .dynamic-txt li {
+    animation: slide 7s steps(2) infinite;
+    top: -2px; } }
 
 @media (max-width: 1360px) {
   .page {
