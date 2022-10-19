@@ -312,20 +312,20 @@
 
 .card:hover{
   transform: scale(1.02);
+  border: solid 3px $blackclr;
 }
 
 // card insade objects
 
 .card-content{
-  --padding:1.5rem;
-  padding: var(--padding);
-  background: linear-gradient(to top,rgba(0,0,0,1),rgba(0,0,0,0.7),rgba(0,0,0,0.5),rgba(0,0,0,0.2),rgba(0,0,0,0.0));
-  transform: translateY(100%);
+  --padding:1rem;
+  padding: 0 var(--padding);
+  visibility: hidden;
   transition: transform 500ms ease;
 }
 
 .card:hover .card-content{
-  transform: translateY(10%);
+  visibility: visible;
 }
 
 .langs_list h3{

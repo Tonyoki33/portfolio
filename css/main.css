@@ -328,17 +328,17 @@ ul li {
   transition: transform 500ms ease; }
 
 .card:hover {
-  transform: scale(1.02); }
+  transform: scale(1.02);
+  border: solid 3px #161853; }
 
 .card-content {
-  --padding:1.5rem;
-  padding: var(--padding);
-  background: linear-gradient(to top, black, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
-  transform: translateY(100%);
+  --padding:1rem;
+  padding: 0 var(--padding);
+  visibility: hidden;
   transition: transform 500ms ease; }
 
 .card:hover .card-content {
-  transform: translateY(10%); }
+  visibility: visible; }
 
 .langs_list h3 {
   padding: 0;
@@ -464,7 +464,7 @@ ul li {
 ************************************************************/
 /*FULL SCREEN*/
 @media (max-width: 1440px) {
-  .card:hover .card-content {
+  .card:hover {
     transform: translateY(-30%); }
   /*First page*/
   .section_txt .static_txt--en, .section_txt .static_txt--es {
@@ -528,10 +528,7 @@ ul li {
   .langs_list ul li, .tools_list ul li {
     line-height: 1.5rem;
     font-size: 1.5rem; }
-  .card-content {
-    --padding:1.5rem;
-    transform: translateY(120%); }
-  .card:hover .card-content {
+  .card:hover {
     transform: translateY(-15%); } }
 
 /*  IPAD pro
@@ -700,12 +697,10 @@ ul li {
   .card_one {
     background-size: 100%;
     background-position: center; }
-  .card-content {
-    transform: translateY(140%); }
-    .card-content h2 {
-      font-size: 3rem; }
-    .card-content p {
-      font-size: 2rem; }
+  .card-content h2 {
+    font-size: 3rem; }
+  .card-content p {
+    font-size: 2rem; }
   .card-button {
     padding: 0.5em 1em;
     font-size: 2rem; }

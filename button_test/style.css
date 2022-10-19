@@ -20,7 +20,7 @@ body{
     max-width: 35ch ;
     border-radius: 0.5rem;
     overflow: hidden;
-
+    cursor: pointer;
     transition: transform 500ms ease;
 }
 
@@ -30,7 +30,7 @@ body{
 }
 
 .card:hover{
-    transform: scale(1.02);
+    border: solid green 5px;
 }
 
 .card:hover .card-content > *:not(.card-title){
@@ -41,12 +41,12 @@ body{
     --padding:1.5rem;
     padding: var(--padding);
     background: linear-gradient(to top,rgba(0,0,0,0.7),rgba(0,0,0,0));
-    transform: translateY(70%);
-    transition: transform 500ms ease;
+    visibility: hidden;
+    transition: transform 2000ms ease;
 }
 
 .card:hover .card-content{
-    transform: translateY(0);
+    visibility: inherit;
 }
 
 

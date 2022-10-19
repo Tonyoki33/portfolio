@@ -4,7 +4,7 @@
 
 /*FULL SCREEN*/
 @media (max-width: 1440px) {
-    .card:hover .card-content{
+    .card:hover{
       transform: translateY(-30%);
     }
 
@@ -119,13 +119,8 @@
     font-size:1.5rem;
 }
 
-    .card-content{
-        --padding:1.5rem;
 
-        transform: translateY(120%);
-    }
-
-    .card:hover .card-content{
+    .card:hover {
         transform: translateY(-15%);
         }
 
@@ -430,7 +425,6 @@
     
 
     .card-content{
-        transform: translateY(140%);
         h2{
             font-size: 3rem;
         }
